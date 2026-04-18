@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cats.directory</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e77e23",
+                        "primary-hover": "#d36d16",
+                        "background-light": "#FFF8F0",
+                        "background-dark": "#211811",
+                        "text-dark": "#1b140e",
+                        "text-light": "#97704e",
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "sans": ["Be Vietnam Pro", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "2xl": "3rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 10px 40px -10px rgba(0,0,0,0.08)",
+                        "card": "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            background-color: #FFF8F0;
+            color: #1b140e;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1 !important;
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }.no-scrollbar {
+            -ms-overflow-style: none;scrollbar-width: none;}
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-dark antialiased overflow-x-hidden w-full">
+<header class="sticky top-0 z-50 w-full bg-background-light/80 backdrop-blur-md border-b border-[#f3ede7]">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3 group" href="#">
+<div class="size-8 text-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined !text-[32px] filled-icon">pets</span>
+</div>
+<h2 class="text-[#1b140e] text-xl font-bold tracking-tight">Cats.directory</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#1b140e] hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-[#1b140e] hover:text-primary text-sm font-medium transition-colors" href="#">Features</a>
+<a class="text-[#1b140e] hover:text-primary text-sm font-medium transition-colors" href="#">Resources</a>
+<a class="text-[#1b140e] hover:text-primary text-sm font-medium transition-colors" href="#">Blog</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-[#1b140e] hover:text-primary text-sm font-bold transition-colors" href="#">Log In</a>
+<button class="bg-primary hover:bg-primary-hover text-white h-10 px-6 rounded-full text-sm font-bold shadow-md shadow-primary/30 transition-all hover:shadow-lg hover:shadow-primary/40 active:scale-95">
+                Sign Up
+            </button>
+</div>
+</div>
+</header>
+<section class="relative w-full pt-10 pb-20 px-6">
+<div class="max-w-[1280px] mx-auto">
+<div class="relative w-full h-[560px] rounded-2xl overflow-hidden bg-gray-200 group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a fluffy ginger maine coon cat looking directly at camera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfG9gHDrvQUuEHFNIM1cVNWv7wLgy4lsm_0cjcaT1CHIQDMyDf6nX_tbkP41fvnkzkP8h02swkFVa1Y9ZzlEt549cQsvfutGDC9CuyomeF--xGL2TymHteJrvvPaO_A3V-e5_jOLNI3ybsX3aqqPwEQTrv_pInUM42z1IYl9rwq01g-NdztKprGEx9h4nfo6yCAQpqN43MumyJY0gYGuuWNhhIXgjdlk4JwYCunAO6P0fxWUAHREm6XN4l5HTYySTWDhcsyGjbm0Sz");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+<h1 class="text-white text-4xl md:text-6xl font-black tracking-tight mb-8 drop-shadow-lg max-w-3xl leading-tight">
+                    Find the Purr-fect Match
+                </h1>
+<div class="w-full max-w-[600px] bg-white rounded-full p-2 shadow-soft flex items-center transition-transform hover:-translate-y-1 duration-300">
+<div class="pl-5 text-gray-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex-1 border-none focus:ring-0 text-gray-800 placeholder-gray-400 text-base h-12 bg-transparent" placeholder="Search for trainer, vet..." type="text"/>
+<button class="bg-primary hover:bg-primary-hover text-white h-12 px-8 rounded-full font-bold transition-colors">
+                        Search
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full py-12 bg-background-light overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-6 mb-8 flex items-end justify-between">
+<div>
+<span class="text-primary font-bold uppercase tracking-wider text-xs mb-2 block">Meet the Stars</span>
+<h2 class="text-[#1b140e] text-3xl md:text-4xl font-black tracking-tight">Featured Cats</h2>
+</div>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+            View Directory <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="relative w-full group/slider">
+<button aria-label="Scroll left" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 size-14 rounded-full bg-white/90 backdrop-blur-sm text-text-dark shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all hover:text-primary">
+<span class="material-symbols-outlined !text-3xl">chevron_left</span>
+</button>
+<button aria-label="Scroll right" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 size-14 rounded-full bg-white/90 backdrop-blur-sm text-text-dark shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all hover:text-primary">
+<span class="material-symbols-outlined !text-3xl">chevron_right</span>
+</button>
+<div class="flex overflow-x-auto gap-6 px-6 pb-8 w-full no-scrollbar snap-x scroll-smooth">
+<div class="relative min-w-[280px] sm:min-w-[340px] md:min-w-[400px] h-[450px] md:h-[550px] rounded-2xl overflow-hidden shadow-lg snap-center cursor-pointer group shrink-0">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Portrait of a fluffy white cat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBT3gRAF3z7ITBhDkUdxHwjHPx5XfXOCi3jxMS6AccWXKJfNTz1sIZvQ1BmD-VIt4WguguSnJvjGmdc4WmdbcEeeN1lPPW0j0nwp2BLMg8IswSA8eCm25vZBt2OO0v0ezb9zdtEa2C656Kr0uhAGKIW7ysZfUhfHdI_CcDq7rBYum8N_zqDFGaeb1JrG85OphH5MMKCycBPu-wlkp-5kGsUurDGzq6c0IPSjKQb3Dxmtnwk7i79_fWhfSL0FH7BCu3BZ6bdof8ghmg");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform">
+<h3 class="text-white text-3xl font-black mb-1">Luna</h3>
+<p class="text-gray-300 text-sm font-medium">Persian • 3 Years</p>
+</div>
+</div>
+<div class="relative min-w-[280px] sm:min-w-[340px] md:min-w-[400px] h-[450px] md:h-[550px] rounded-2xl overflow-hidden shadow-lg snap-center cursor-pointer group shrink-0">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Portrait of a curious tabby cat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKMwIcsGzt1GUwC7eIBvDJ-p1KXKPbMINQEYK-QmBy1lo1ajvHJsoWsiQSId02hvtut1258_wYgx4RwDR9Fo_hHJl6CUmM_PT96qFM_ExQc3UKL35Pplry-vIC05ulp52GMQUUinFoiKuW2aLOtGT-7hMtJOFku4omJ__9xQ6RFPM328Jbit9bTzgJnnP8qyNo412cvdsvx1ootCST5E_w9ZjWA-H7Jv1WQsKuMidSvroPgDJfIyNk-Oz1ItOv-yckQ2B9EKzdXDkK");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform">
+<h3 class="text-white text-3xl font-black mb-1">Oliver</h3>
+<p class="text-gray-300 text-sm font-medium">Tabby • 2 Years</p>
+</div>
+</div>
+<div class="relative min-w-[280px] sm:min-w-[340px] md:min-w-[400px] h-[450px] md:h-[550px] rounded-2xl overflow-hidden shadow-lg snap-center cursor-pointer group shrink-0">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Portrait of a black cat with green eyes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQXfB2tyiKYU9oUFJWxXbJ9b7jL7V5bfB6F7jwGoO2HSOs4ifXduz61oeuONWtsGyjeDOxxpI0gNq7D0NtItiBTOdaafwjv6OlO0TcrsdbReU_Q-w1GoarOIMRVM3sNoFtUbCgn_HtfRb0OXPDvV61t87pxaU4JlmobRLT1n2-n8faY0Mk9FT3NqPgB0GPpdjfmZSQoR0RD2V8wJq8mwO-Krm4GwBj_bia6ta840gBMoRZ0g0of8rSh6R84qbaDoAbLNOdVbFUl3A6");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform">
+<h3 class="text-white text-3xl font-black mb-1">Simba</h3>
+<p class="text-gray-300 text-sm font-medium">Bombay • 4 Years</p>
+</div>
+</div>
+<div class="relative min-w-[280px] sm:min-w-[340px] md:min-w-[400px] h-[450px] md:h-[550px] rounded-2xl overflow-hidden shadow-lg snap-center cursor-pointer group shrink-0">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Portrait of a siamese cat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfGYPKyei2VNFWB1bdSuGp90tTGWgLW5llJoTYOUlX5gKhT8bb-zrdQx4OiWnhJIyRkMTIfxCkB0VKx0NFINOcL_m1lER4Vht_56_SAfCaP7P9SeLHF3czgxQiahtyBpAtpl0Q3NBNUtkCHoCyD09EQBBU4xzi-jAeU-r8qLOKzhnOGgYujLYLOYGzD3tKx86jGMgemYpxHgqpSwiUB_QHvlfbl0EsfAuAGeIdiQ4l_cVFvmDfhFomMNHa62XKsmyPLkmMWybvhtmq");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform">
+<h3 class="text-white text-3xl font-black mb-1">Bella</h3>
+<p class="text-gray-300 text-sm font-medium">Siamese • 1 Year</p>
+</div>
+</div>
+<div class="relative min-w-[280px] sm:min-w-[340px] md:min-w-[400px] h-[450px] md:h-[550px] rounded-2xl overflow-hidden shadow-lg snap-center cursor-pointer group shrink-0">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Portrait of a fluffy grey cat sleeping" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcY5IrtTPe2ohfwzhRsCXd0CJFQtV9QY-NvE5Lg_Z7WGb_e9u8keRPIVTOQ9r20vAEgNY1M1vStU5m1b9aw-x5Nc7Xu50b6ZRpicMzy7jNGgjrLuZ7LjgEIINMHq2CC_oB4WJiFv52n-VFt-7lFDCTkZj2d7LQ8W7PhfpUxyuvbRheKGydOUaOPa30tYE4tYy7QyrgqwZtotQJcrQPzOzIiK3MZA5ZaRYBw9RW7j0Rrfv3Ht0CfaptpUMFrr4jFR5j2XdgsaMsL2M8");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform">
+<h3 class="text-white text-3xl font-black mb-1">Milo</h3>
+<p class="text-gray-300 text-sm font-medium">British Shorthair • 5 Years</p>
+</div>
+</div>
+<div class="relative min-w-[280px] sm:min-w-[340px] md:min-w-[400px] h-[450px] md:h-[550px] rounded-2xl overflow-hidden shadow-lg snap-center cursor-pointer group shrink-0">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Portrait of a calico cat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRybSy3um-pCa62r-zBjGNvi0TLhSfZ8H5y6GWYnDfi4IXn3lYpV3bn8PVuI3BC4W9fBmz6_y_u7iqv3UroibrMiL9qaxb2L9S-U_MKHOpNaF5a7kmZ5Gru1taQGin3_JHGqsS73ioJdGzF1aUtW9kkLIwQZsK-p9yUhUPOwWVbnUzq7Niqd7izkkFvAwMvNf5Gc9Fr7ZzMf43q6fLCo5O8yzyvFvnxBonLd5d-nRBVBpkNSleSukf7KRXFMLWLsSaz6MMnrqLpgKA");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform">
+<h3 class="text-white text-3xl font-black mb-1">Chloe</h3>
+<p class="text-gray-300 text-sm font-medium">Calico • 2 Years</p>
+</div>
+</div>
+<div class="min-w-6 snap-center shrink-0"></div>
+</div>
+</div>
+</section>
+<section class="w-full py-10 px-6">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-[#1b140e] text-2xl font-bold tracking-tight">Top Cat Businesses</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-surface rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all hover:-translate-y-1 group">
+<div class="h-48 w-full bg-gray-200 bg-cover bg-center" data-alt="Interior of a modern veterinary clinic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmKz2fM3oU_BFTUYr9tT4lgFAZg5_nVQf7aVqTWeFmSj4f7J6ktOunn-EI7p5wIADprol6OQ_vybudHpdISFMFFwWBCopgBN3Xn0rurkwdrSZ7QbqMvwzdGFwTTamqk1hkGaZX9fGwE91Hd07aR0USWkL5YizwFM3XWlogU6Hq3q5HoH5TDUQ-VoDZXxvbA8s8f5X37bxOMwg-l8CgfJOk9gUWHJovaNr9kqzXWLwqn3GeVKSGjCG8clKPDSAcFNGyeJh3JXRUvnyi");'></div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Paws &amp; Claws Vet</h3>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="text-xs text-gray-400 ml-1">(120 reviews)</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Providing compassionate care for your feline friends with state-of-the-art facilities.</p>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all hover:-translate-y-1 group">
+<div class="h-48 w-full bg-gray-200 bg-cover bg-center" data-alt="Pet grooming supplies on a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-xWeTF6qGDvWadJyyO5_1jgyuScHMWxyLMxivAqM5gg9LQehXTRtvkAl-6WJ22rbseYVMbHt3nuMCp5UiErxM5H2W2SorwuRUi2AuYKzuZQH8iwSaopBj8C-SZ3Gc-47dgSl5RGV9zhM7N0TVPKAasYu1kKzwApbd63KhtN7pT42C2w-WbztVZvI2cra33wy2sG40wGPNdi4jeWhhdCQWcC3qkFIY8LM4USXr1fjh5p_H-_wnlzaHWgZgJ8yaHnmDFDivAlwrsmA2");'></div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Purrfect Groomers</h3>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm">star_half</span>
+<span class="text-xs text-gray-400 ml-1">(85 reviews)</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Specialized grooming services for cats, including lion cuts and de-shedding.</p>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all hover:-translate-y-1 group">
+<div class="h-48 w-full bg-gray-200 bg-cover bg-center" data-alt="Shelves full of cat food and toys" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX2IkMR16RZRHMp6vrrN1c9CJnSacDHKR7ykKyv5K1qHyffnPVtL62F5A8VXSQecNP8QoMP1CbRNwEcCzBORRfApFJK1jinsWKioWz4driUFmKCLhuJjPm090ZhKMXCLoeqUSIdV9D2WcoWX46hgytbsOVw3Cf2AkUUQR_L0H6n3Z1RtBo2SPuRYBwdIeVYyMFCj3-wTAaYVuFKBkBiOkGGCd-wx1g4HgKdnYuqbQiJ-liUMKc5UVg16HTkI27M4RpxCojEIbNqSrX");'></div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">The Cat Pantry</h3>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="text-xs text-gray-400 ml-1">(210 reviews)</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Organic and premium cat food, treats, and accessories delivered to your door.</p>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all hover:-translate-y-1 group">
+<div class="h-48 w-full bg-gray-200 bg-cover bg-center" data-alt="A cat sitting in a cozy cat hotel room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcJQ6M-9wQRP4jY5xFAWqo6suqHy_bPc-43mYEr-4-cN-2Vkv3hF185eT4C0rbZTma8v1FWiaqNiINW7jaNg8zJkisIpETtw-DxpPKmy41sjnKHnuURrO4cF4wSjYdNaCrrB-1OQb70_vDHZhom3wAyFnwzkgyra7XtR3BRenpaXo6yEA4jj5wzwv_tGxk0GIS19Y0kD_Gmrtx47RS9uhqSufxeWlaJjdwh01fm8b17-vz3QwBHntRRD4zLlVnCnkJZlX00wPtgcln");'></div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Kitty Hotel &amp; Spa</h3>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-gray-300 text-sm filled-icon">star</span>
+<span class="text-xs text-gray-400 ml-1">(42 reviews)</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Luxury boarding for your feline companion when you're away.</p>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all hover:-translate-y-1 group">
+<div class="h-48 w-full bg-gray-200 bg-cover bg-center" data-alt="A person playing with a cat using a toy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjFNCTumXZKOQuaqCObxZlZPW6mqjqF5su3wEKGmNcA5nJrXlr_QG7agMT_8vim_0cIptK5kw2BX8k_ZDfH9xfekG27R78fJ8v4hWskKDbcDoLsjQsG_9QNb2WCnCm8SL_ZvPiAo-rVr0rUBBeD48Xc6j7JDPwY6rKYt1mocK0oI_E-RjYogHe-lRKiFAkfMOeMJtFzLDAFpFIH09swri_jh2dypwJcAcu1YNxgpGWdWNewFXXwD5i75z-aMJozfEX4qq7x7cWipVo");'></div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Whisker Sitters</h3>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="text-xs text-gray-400 ml-1">(315 reviews)</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Reliable and loving cat sitting services in your own home.</p>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all hover:-translate-y-1 group">
+<div class="h-48 w-full bg-gray-200 bg-cover bg-center" data-alt="A cat training session with treats" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAq7kTM1Zk8c38ub0V1ZYCx7gJLSvWizOD3tQH1emttvgQNgXrS0AyjZWXL7pgEcYYQ0-OQJibV3T6cXs7BQbFw-8ey-SZZTEC6N69WF9z0YttS2zcgIMw0u8dmLR9yomaVApC-FpffBVPfvYEfbJuHlwZTMWpfHxVUjq3phMtSULqQTw2XaesWQhWBxKrJxnD2tVrBMaNvMMMXHvW4yKfLVd58HC4D24pmj7ZUuSUb8lJyl-7kUMRlOE4WiNT1heFERBzrFOZ3z9Be");'></div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">SmartCat Training</h3>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-primary text-sm filled-icon">star</span>
+<span class="material-symbols-outlined text-gray-300 text-sm filled-icon">star</span>
+<span class="text-xs text-gray-400 ml-1">(56 reviews)</span>
+</div>
+<p class="text-sm text-gray-500 line-clamp-2">Behavioral training and trick learning for cats of all ages.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full py-10 px-6 mb-10">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-[#1b140e] text-2xl font-bold tracking-tight">Latest Articles</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Close up of dry cat food in a bowl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzyDkfSHtthbDj3FOpxlInDqyexDqRq_Lg07X1oOSIF0IK9VH3gcxjzvdKnuWwCByGU4ITUUnpBjAQO54knSArdAREwAtTgt5O7bI_ivzzTN19QbrIGtOF0WQALjma3wahJ87BPL_Up1Sg_i-iwMSJag1NP4ZJIHmHA7u85lQbbD8Xp0VbHE7Hv8ZfrbngTgMbrBxaCZg20TI-iobfeGaHnc-wUQrJhHsbHjBPdmsf9wINGkHqPIAfJaDHLpMs3qUlGCdUu9UOS3Tm");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Health</span>
+<h3 class="text-xl font-bold text-[#1b140e] group-hover:text-primary transition-colors">Nutritional Needs for Senior Cats</h3>
+<p class="text-sm text-gray-500 line-clamp-2">As cats age, their dietary requirements change significantly. Learn what to feed your elderly feline.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="A cat playing with a feather wand toy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfIeOiol6tKbNiGpAcZartaPx2YstFqxRfLQN4-hPPTO_TxxYPCJKqSyQkgPg4epiCRXk8UXSmLIgpA-uhQ5aGo5xFBK9tCXUjVdyqn4q6HVwVVJPYK8O87YtYJS0KRL2nKr759DfVXEFrcDekcaB4Ysfl5TOqN6fsNAfWkjwkymW5Z3sOhOPVXl_2A1lSC3pSCIZpQ6Q1THCKSt-cn7too5Ao8BuMjS0ERi3nto5i4xj8tdHkeiJgDRPKOqeAQl-6FZX_bBdF27II");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Lifestyle</span>
+<h3 class="text-xl font-bold text-[#1b140e] group-hover:text-primary transition-colors">Best Interactive Toys of 2024</h3>
+<p class="text-sm text-gray-500 line-clamp-2">Keep your indoor cat active and entertained with our top picks for interactive toys.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="A cat scratching a scratching post" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0REw1kXKiGfyzbx2IIb7LfhWD3MdsxOC3VcZipcjqCWx1x-smbZ2aDN89SUrspJFxKSczKB5KN1XKk7K2-hfuqWWSH13WL3U39ee5Cp1apoRoBN_Bs6vAN4cG0r20WkjYmKHL4BNBYkFEtgcrvmJKehlY24TJCpVhigup9h_TCFy1H14IqhbGHQ8o5du9DZzUbaNWQQq8zrvh51pD1_T8zJvH6KbEIeSHMYlL9jNi3zRVtNA9wPMot2OnTZh2NYAhmSu2EYTyxNO_");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Behavior</span>
+<h3 class="text-xl font-bold text-[#1b140e] group-hover:text-primary transition-colors">Why Do Cats Scratch Furniture?</h3>
+<p class="text-sm text-gray-500 line-clamp-2">Understanding the natural instinct behind scratching and how to redirect it properly.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="A kitten being held by a vet" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkEPGyKFRNHCkXRPyuEnK_oC58Hvn0bn_ddu0nIaddtCf5nyFUb4yY22vt7kB5fZcInxqNCikQGf9FuAm8jFx-ZdLxk5qhebV7hXsVlb3XGbk5Ny_N79piYcj5ZmPAX-NMo52fSjQmg9H5v1CODcalUZSFHxa8G1YVDmGUoAanYq2C19sIwlr32XMF2M4ktzQ0yM4HyzystfW7-y0G8lGr05NOeuDl_RP8PGx8QoOswPpQ95e61C-FD_j82LCJs58bZSdb-BBr8Qvs");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Care</span>
+<h3 class="text-xl font-bold text-[#1b140e] group-hover:text-primary transition-colors">First Vet Visit: What to Expect</h3>
+<p class="text-sm text-gray-500 line-clamp-2">A comprehensive guide for new kitten owners preparing for their first veterinary appointment.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Two cats grooming each other" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFcr1C6ENMtZGnK5FC1Ali43H8xs2E6MMH9_Lua_FoBLvlBtnb7cN6E7QS1lw5xG4Ep31Zhbnbv9SBrbbEtjrLyo9LduD5xvxzY2Q1AAhPpEiKNcyrI83Pj0REd1Rh8bM-wAnHSCzxw-7Nw1neH-PlAhVQdVhFG5vVWml2aryrbxCM-361sYQ005-2DeZMKSvjthG_QAMedA7fNHK6Wk9C_0V_xGCelpPH21AW16O939JihOF-O7cIqZL8MSkcdXfP1l2A4UD6tDsC");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Social</span>
+<h3 class="text-xl font-bold text-[#1b140e] group-hover:text-primary transition-colors">Introducing a Second Cat</h3>
+<p class="text-sm text-gray-500 line-clamp-2">Tips and tricks for expanding your feline family without causing stress or fights.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="A cat looking out a window at birds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsn8SdVd-WNvlpGbfVT99-v6TJiAQ51Ucc1c2UU16UDoh1zv5uN52Z1n4RlrkXC7RkUB3Q2U-Z5To4SL8-4i9vH-Gz_xXWOhZZDkIaUhd_rDpZAwGOAMenIxN8EOP7s1IuOytR7shCKjjhRZUKNWFoxbQTqofJL8p6sz2w6TJftNjjqeDgAWpanGWVPvRBufUkqUk44kvNd3xQL9xklrBwh3qifA7EQOR9HLoe3KUkhaRLDv8SU-LKWU2TyYWZeywC4Quzl7ThjNy5");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Environment</span>
+<h3 class="text-xl font-bold text-[#1b140e] group-hover:text-primary transition-colors">Creating a Cat-Friendly Home</h3>
+<p class="text-sm text-gray-500 line-clamp-2">Vertical space, hiding spots, and other enrichment ideas to make your home a cat paradise.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<footer class="w-full bg-[#1b140e] text-white pt-16 pb-10 px-6">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary text-2xl filled-icon">pets</span>
+<span class="font-bold text-lg">Cats.directory</span>
+</div>
+<p class="text-sm text-gray-400">The ultimate community for cat lovers, owners, and businesses.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-white">Company</h4>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Careers</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Press</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-white">Resources</h4>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Blog</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Guides</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Partners</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-white">Legal</h4>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-xs text-gray-500">© 2024 Cats.directory. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.53c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Business Profile - Cats.directory</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e77e23",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211811",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d241e",
+                        "text-main": "#1b140e",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "1.5rem", 
+                        "xl": "2rem", 
+                        "2xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for gallery if needed */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-text-main dark:text-gray-100 transition-colors duration-200">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#f3ede7] dark:border-gray-800">
+<div class="px-4 lg:px-10 py-3 max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-text-main dark:text-white cursor-pointer">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] hidden sm:block">Cats.directory</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-text-main dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Find a Pro</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Community</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Log In</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<div class="hidden sm:flex w-full max-w-xs items-center bg-[#f3ede7] dark:bg-gray-800 rounded-full h-10 px-4">
+<span class="material-symbols-outlined text-[#97704e] dark:text-gray-400 text-[20px]">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-[#97704e] dark:placeholder:text-gray-500 text-text-main dark:text-white ml-2" placeholder="Search for vets, groomers..."/>
+</div>
+<button class="flex shrink-0 items-center justify-center rounded-full h-10 px-6 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+                    Sign Up
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<!-- Hero Section -->
+<div class="relative w-full mb-8">
+<!-- Banner Image -->
+<div class="w-full h-48 md:h-72 lg:h-80 rounded-xl md:rounded-3xl overflow-hidden bg-gray-200">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up of a cute cat resting on a soft blanket" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyXOQ9J3RXm6CwqpNWVhSWxq2w5uIa7jKGPUxT5ebB2HVZHJwJueHea2nbAS2UknUcOv8A3qCQBKOtrzfKZ_ZMBbq4wbNcux5o95hbiL0naa3morp6GSw554tlXmiICllRW0tWbooxWXcPHQCKLRWZEGQmsAu30dkKsq61QQ0_HTjCgvWMahEb16jc9K8Vn3-qI1Hv5HpSLx69BPMzK9D2nZbDl60zAgPzgieDQPpJyHKDQaVxp4NSEgqPEv0NhKvTWuS7u6aJILiJ');"></div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<!-- Profile Info Floating Card -->
+<div class="relative -mt-16 md:-mt-20 px-4 md:px-8">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-[#f3ede7] dark:border-gray-700 p-6 flex flex-col md:flex-row items-start md:items-end gap-6">
+<!-- Avatar -->
+<div class="relative -mt-16 md:-mt-12 shrink-0">
+<div class="size-32 rounded-full border-4 border-surface-light dark:border-surface-dark bg-gray-100 overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of a friendly veterinarian smiling holding a cat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKjj7vkPwIFrO0Ewk4m-PcJoxp2x7LT4xXbR7q2kQhavmOvibvBzKTzAWK8KaPSjZNVGJyzU8syhZSxxTk16eOQVUbIZ5zPWxklkA45Vx_gXUDNP2DEVqYRXTov4TMDYRLYiOkA_4ha3jZ5PZ1WG-P7iv-3RWSfkL6cYL1FRwABRdYEytxqm6cAgOKsp8bcb62qiPaP37s4Fd4YQbt1loBGNvEbhPI7Gj99f4GopzRtQCgaVRMPDYrd8JQtwWXabS5zVo5PcMWtm3g');"></div>
+</div>
+<div class="absolute bottom-1 right-1 bg-blue-500 text-white p-1 rounded-full flex items-center justify-center border-2 border-surface-light dark:border-surface-dark" title="Verified Business">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col gap-1 w-full">
+<div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+<h1 class="text-2xl md:text-3xl font-bold text-text-main dark:text-white">Purrfect Paws Clinic</h1>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-[#f3ede7] dark:bg-gray-700 text-xs font-semibold text-[#97704e] dark:text-gray-300">
+                                Veterinarian
+                            </span>
+</div>
+<div class="flex items-center gap-2 text-[#97704e] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>123 Whiskers Lane, San Francisco, CA</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+</div>
+<span class="font-bold text-text-main dark:text-white">4.9</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 underline decoration-dotted cursor-pointer">(120 reviews)</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto mt-4 md:mt-0">
+<button class="flex-1 sm:flex-none h-10 px-6 bg-primary text-white rounded-full font-bold text-sm hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                            Book Now
+                        </button>
+<button class="flex-1 sm:flex-none size-10 bg-[#f3ede7] dark:bg-gray-800 text-text-main dark:text-white rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button class="flex-1 sm:flex-none size-10 bg-[#f3ede7] dark:bg-gray-800 text-text-main dark:text-white rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 md:px-0">
+<!-- Left Column (Main Content) -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<!-- About Section -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 md:p-8 shadow-sm border border-[#f3ede7] dark:border-gray-800">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-primary/10 rounded-full text-primary">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<h2 class="text-xl font-bold">About Us</h2>
+</div>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                        At Purrfect Paws Clinic, we believe every cat deserves royal treatment. Founded in 2015, we specialize exclusively in feline care, providing a stress-free environment away from barking dogs. Our team of certified cat specialists is dedicated to ensuring your feline friend lives a long, healthy, and happy life.
+                    </p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        We offer state-of-the-art diagnostics, dental care, and comfortable boarding suites for when you're away. Come visit our cat-friendly facility today!
+                    </p>
+</section>
+<!-- Services Section -->
+<section>
+<h2 class="text-xl font-bold mb-4 px-2">Services &amp; Pricing</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Service Card 1 -->
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-[#f3ede7] dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex gap-4 items-start">
+<div class="size-12 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-text-main dark:text-white">Wellness Exam</h3>
+<span class="font-bold text-primary">$65</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Comprehensive physical checkup tailored for cats of all ages.</p>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-[#f3ede7] dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex gap-4 items-start">
+<div class="size-12 rounded-full bg-green-50 dark:bg-green-900/30 text-green-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">dentistry</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-text-main dark:text-white">Dental Cleaning</h3>
+<span class="font-bold text-primary">$250+</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Professional cleaning, polishing, and oral health assessment.</p>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-[#f3ede7] dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex gap-4 items-start">
+<div class="size-12 rounded-full bg-purple-50 dark:bg-purple-900/30 text-purple-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">vaccines</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-text-main dark:text-white">Vaccinations</h3>
+<span class="font-bold text-primary">$30</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Core vaccines including FVRCP and Rabies to keep them safe.</p>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-[#f3ede7] dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex gap-4 items-start">
+<div class="size-12 rounded-full bg-orange-50 dark:bg-orange-900/30 text-orange-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-text-main dark:text-white">Lion Cut</h3>
+<span class="font-bold text-primary">$85</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Full body groom and style, perfect for long-haired breeds.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo Gallery -->
+<section>
+<div class="flex justify-between items-center mb-4 px-2">
+<h2 class="text-xl font-bold">Gallery</h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 h-64 md:h-80">
+<div class="col-span-2 row-span-2 rounded-xl overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a cute cat looking at camera" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6EwsDB5cfVx5AzHZpmBmXmu3RXFSrsa5tAoIccYqgLkQIo5o2S6sU_F2xbcP0ni9gej7Rdrii8TS8nLvzgy-sLE7MTFf9KrTPdvgULFYuz27Ookelmsko4Jd9-99JImfpQ3dPnmC5NQvLvQ88IYVjn2RhQmiP850FSKyHyuMQ4pgegha77qLcdDI43FdKSgZoEJkATRtn3I2CWAeSxft0VCNvZlugRrWFBBbOcy53Bkt_yL0ulkAus5R_ukQAWUtKE_DXWC1YcR4N');"></div>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cat playing with a toy" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3GogMrWb6qJS7a9nkm8c0j5vJK3RiajWA3lmwu4vEWbFsnYBJYukNSAKLUwPCgSTIScDxzFj_VtFiYeEjutDzVGA_jLcPL4TrN_wImyq6bxd_-Wn7hjacOmKXKqW9d3J4lx-mRNSQlnfW9QbCXciVwsF4s-KzDEfWRfPz5osERIGkub9lm5X8yEIcRKQi3oUAsJ9oWQIGuB8xaYfTPfpexP8wpu4VMpNgQ90oNVa5XjpkjoSFD8LveY3Rh15vmy_SdimfWKk8Dnpl');"></div>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Funny cat with sunglasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPDB8Ra6Q1Qawph5IpK2ANzAN4u8eQqDalJ3Zk466-NNU7SV6LWfRC5RSIJhJu4YOjIoyQeE1htPi5dhvKGGKMkU77Br2gCS8G99pv7vh-QhE8bBoqtRN_rU3sReuEoUGVxAbmMJ3dxaanzLbfYHJ1hyHk8AgRre5rIfmQlNaHE4yAJdW-CCrbKoKdnVd0T5yFoi6Ah42UJv5pPa8MilO82lFnRnkrZuArw_8Sse6ZH6_4Oc5gPLwZkIOrX2sn9w5LJkXiuiZf0Gca');"></div>
+</div>
+<div class="col-span-2 row-span-1 rounded-xl overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern clean veterinary clinic interior" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLybgYHZUhB3xuc86qdJd2svB01L4MP_-vEuvqSDRGWoFomcpgkb1tG_GeJr828pjwX3cBm_arxlyaL4EQcN1u8_AOFehQ8C9gs1heOS3YIlO8W8pJ8Jlk9dE3xuGViG8c7F2dGbMdqMJ4jjXeW3qpKXvHP5iPp2JHQUjmI4FIP-5hAw_Ic0w1hIKvhlRGpkV_bDQNQ7kmFEus9eP8m9YGSC9iRolQQv746X0PjR6sKGi-dayUvZlMv1tcdDJK19h-fX4NzGPwXRei');"></div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 md:p-8 shadow-sm border border-[#f3ede7] dark:border-gray-800">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+<h2 class="text-xl font-bold">Reviews &amp; Ratings</h2>
+<button class="px-5 py-2.5 bg-[#f3ede7] dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-text-main dark:text-white rounded-full text-sm font-bold transition-colors">
+                            Write a Review
+                        </button>
+</div>
+<div class="flex flex-wrap gap-8 mb-8 border-b border-[#f3ede7] dark:border-gray-700 pb-8">
+<!-- Summary Number -->
+<div class="flex flex-col gap-1">
+<p class="text-text-main dark:text-white text-5xl font-black tracking-tight">4.9</p>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Based on 120 reviews</p>
+</div>
+<!-- Bars -->
+<div class="flex-1 min-w-[200px] max-w-sm flex flex-col gap-2">
+<div class="flex items-center gap-3 text-sm">
+<span class="w-3">5</span>
+<div class="flex-1 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full"></div>
+</div>
+<span class="w-8 text-right text-gray-500">85%</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="w-3">4</span>
+<div class="flex-1 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[10%] rounded-full"></div>
+</div>
+<span class="w-8 text-right text-gray-500">10%</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="w-3">3</span>
+<div class="flex-1 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[3%] rounded-full"></div>
+</div>
+<span class="w-8 text-right text-gray-500">3%</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="w-3">2</span>
+<div class="flex-1 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[1%] rounded-full"></div>
+</div>
+<span class="w-8 text-right text-gray-500">1%</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="w-3">1</span>
+<div class="flex-1 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[1%] rounded-full"></div>
+</div>
+<span class="w-8 text-right text-gray-500">1%</span>
+</div>
+</div>
+</div>
+<!-- Individual Reviews -->
+<div class="flex flex-col gap-6">
+<!-- Review 1 -->
+<div class="flex gap-4">
+<div class="size-10 rounded-full bg-gray-200 overflow-hidden shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of a woman smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6xbGE7LvpVlRxyu8qDpSLgprgwODpzxwBe2BBbrOjqMTCePXm6mNOg-Wql-lEDjotJ-m6CH5tSpaoabknuJzQho0XLEJnCqZkGvsaqX_YUG29ePlYxAFxU6R1u9Kei85H34VgXOEL9e0bvl6-ly-c-MHl8es9cI-Tv8IVQ8hs5Zm75VzEVpgDURE1QhRZL9WvnsnFB2Av_lRtPahs1qQHOHBkoHeVg_ESjLsPWeZkUc11MLDIC7zHqwzUecVH80YqTx8SilDOgw3h');"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-text-main dark:text-white">Sarah Jenkins</h4>
+<div class="flex text-primary text-xs mt-0.5">
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="text-gray-400 ml-2">2 days ago</span>
+</div>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Absolutely amazing service! Dr. Smith was so gentle with my nervous tabby, Whiskers. The clinic is clean, smells nice, and the staff is incredibly friendly. Highly recommend!</p>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="flex gap-4">
+<div class="size-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold shrink-0">
+                                M
+                            </div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-text-main dark:text-white">Mike Ross</h4>
+<div class="flex text-primary text-xs mt-0.5">
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span class="material-symbols-outlined text-[14px] fill-current text-gray-300">star</span>
+<span class="text-gray-400 ml-2">1 week ago</span>
+</div>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Great experience overall. Pricing is a bit on the higher side, but you definitely get what you pay for. The facilities are top notch.</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 text-primary font-bold text-sm hover:bg-primary/5 rounded-lg transition-colors">
+                        Read All 120 Reviews
+                    </button>
+</section>
+</div>
+<!-- Right Column (Sidebar) -->
+<div class="lg:col-span-1 flex flex-col gap-6">
+<div class="sticky top-24 flex flex-col gap-6">
+<!-- Contact Card -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-[#f3ede7] dark:border-gray-800">
+<h3 class="text-lg font-bold mb-4">Contact Info</h3>
+<div class="flex flex-col gap-4">
+<!-- Map -->
+<div class="w-full aspect-video rounded-lg overflow-hidden relative bg-gray-200">
+<div class="w-full h-full bg-cover bg-center" data-alt="Map view showing San Francisco city streets" data-location="San Francisco" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9yT9UgH67tx90jqvxpBT8bgxHjKjsF0ZWRYLReJ2xfDrqvtk9vn7e4CSFG8FqEggDtGM-dvi6QJgMYJ1NtPXSClduWlwNoaqGMCJVz6rFyPVhh28jFecB2dpF4zrmIbTWdU69CDxsVJqeU46iFDyrbEOH_RNUAUrYxl_cYs5cCOvKZhBOniRld3J9bK5NVZKZVIBLZqVjhMVP0H55POAWZlQNU34LGJIVVaYwuiJsP20cxE-nff7KGrKtakkdvhVOHFuNAwAO4nxo');"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors cursor-pointer group">
+<div class="bg-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-sm">directions</span>
+<span class="text-xs font-bold text-text-main">Get Directions</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 items-start">
+<div class="mt-1 text-[#97704e] dark:text-gray-400">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<p class="text-sm text-text-main dark:text-white leading-relaxed">
+                                    123 Whiskers Lane<br/>
+                                    Mission District<br/>
+                                    San Francisco, CA 94110
+                                </p>
+</div>
+<div class="flex gap-3 items-center">
+<div class="text-[#97704e] dark:text-gray-400">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<a class="text-sm text-text-main dark:text-white hover:text-primary font-medium" href="tel:+14155550199">
+                                    (415) 555-0199
+                                </a>
+</div>
+<div class="flex gap-3 items-center">
+<div class="text-[#97704e] dark:text-gray-400">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</div>
+<a class="text-sm text-primary hover:underline font-medium truncate" href="#">
+                                    www.purrfectpawsclinic.com
+                                </a>
+</div>
+<hr class="border-[#f3ede7] dark:border-gray-700 my-1"/>
+<div class="flex gap-4 justify-center">
+<a class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 transition-colors" href="#">
+<!-- Simple generic social icon shape for illustration -->
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Hours Card -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-[#f3ede7] dark:border-gray-800">
+<div class="flex items-center gap-2 mb-4">
+<h3 class="text-lg font-bold">Opening Hours</h3>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-100 text-green-700 uppercase tracking-wide">Open Now</span>
+</div>
+<ul class="flex flex-col gap-3 text-sm">
+<li class="flex justify-between items-center text-text-main dark:text-white font-medium">
+<span>Monday</span>
+<span>9:00 AM - 6:00 PM</span>
+</li>
+<li class="flex justify-between items-center text-text-main dark:text-white">
+<span>Tuesday</span>
+<span>9:00 AM - 6:00 PM</span>
+</li>
+<li class="flex justify-between items-center text-text-main dark:text-white">
+<span>Wednesday</span>
+<span>9:00 AM - 6:00 PM</span>
+</li>
+<li class="flex justify-between items-center text-text-main dark:text-white">
+<span>Thursday</span>
+<span>9:00 AM - 6:00 PM</span>
+</li>
+<li class="flex justify-between items-center text-text-main dark:text-white">
+<span>Friday</span>
+<span>9:00 AM - 5:00 PM</span>
+</li>
+<li class="flex justify-between items-center text-gray-400">
+<span>Saturday</span>
+<span>10:00 AM - 2:00 PM</span>
+</li>
+<li class="flex justify-between items-center text-gray-400">
+<span>Sunday</span>
+<span>Closed</span>
+</li>
+</ul>
+</div>
+<!-- Amenities/Tags -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-[#f3ede7] dark:border-gray-800">
+<h3 class="text-lg font-bold mb-4">Specialties</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-[#f3ede7] dark:bg-gray-800 text-xs font-medium text-text-main dark:text-gray-300 border border-transparent hover:border-primary/50 cursor-default transition-colors">Cat Friendly Practice</span>
+<span class="px-3 py-1 rounded-full bg-[#f3ede7] dark:bg-gray-800 text-xs font-medium text-text-main dark:text-gray-300 border border-transparent hover:border-primary/50 cursor-default transition-colors">Emergency Care</span>
+<span class="px-3 py-1 rounded-full bg-[#f3ede7] dark:bg-gray-800 text-xs font-medium text-text-main dark:text-gray-300 border border-transparent hover:border-primary/50 cursor-default transition-colors">Surgery</span>
+<span class="px-3 py-1 rounded-full bg-[#f3ede7] dark:bg-gray-800 text-xs font-medium text-text-main dark:text-gray-300 border border-transparent hover:border-primary/50 cursor-default transition-colors">Boarding</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-gray-900 border-t border-[#f3ede7] dark:border-gray-800 mt-12 py-12">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-4 text-text-main dark:text-white">
+<div class="size-6 text-primary">
+<svg class="w-full h-full" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-bold text-lg">Cats.directory</span>
+</div>
+<p class="text-sm text-gray-500 mb-4">The ultimate resource for cat owners to find the best care for their furry friends.</p>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white mb-4">Discover</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Veterinarians</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Groomers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cat Cafes</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shelters</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white mb-4">Community</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Forum</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Events</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white mb-4">Support</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">For Businesses</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-100 dark:border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+<p>© 2023 Cats.directory. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

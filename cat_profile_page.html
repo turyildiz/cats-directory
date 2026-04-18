@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mittens the Destroyer - Cats.directory</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e77e23",
+                        "primary-light": "#fbead9", // lighter orange for backgrounds
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#211811",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a2018",
+                        "text-main": "#1b140e",
+                        "text-secondary": "#97704e",
+                        "border-color": "#f3ede7",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "1.5rem", 
+                        "xl": "2rem", 
+                        "2xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(231, 126, 35, 0.05)',
+                        'card': '0 2px 12px -2px rgba(27, 20, 14, 0.04)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary selection:text-white">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-border-color bg-background-light/90 backdrop-blur-md px-4 py-3 lg:px-10">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-3 text-text-main group" href="#">
+<div class="size-8 text-primary transition-transform group-hover:scale-110">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Cats.directory</h2>
+</a>
+<div class="hidden md:flex items-center rounded-xl bg-white px-4 h-10 border border-border-color focus-within:ring-2 focus-within:ring-primary/20 w-64 transition-all">
+<span class="material-symbols-outlined text-text-secondary">search</span>
+<input class="ml-2 w-full bg-transparent text-sm placeholder:text-text-secondary focus:outline-0 text-text-main" placeholder="Search for cats, breeds..."/>
+</div>
+</div>
+<div class="flex items-center gap-4 lg:gap-8">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-text-main text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-text-main text-sm font-semibold hover:text-primary transition-colors" href="#">Explore</a>
+<a class="text-text-main text-sm font-semibold hover:text-primary transition-colors" href="#">Marketplace</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex h-10 items-center justify-center rounded-full bg-white border border-border-color px-5 text-sm font-bold text-text-main hover:bg-gray-50 transition-colors">
+                    Log In
+                </button>
+<div class="size-10 rounded-full bg-gray-200 bg-cover bg-center ring-2 ring-white cursor-pointer" data-alt="User profile picture of a woman smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoqs3B7yX9BChEiJ74p9ZawScAgOjEfXT-d-HiXTBY8cdSQ8em57ipKc5Nv2WhRhhvzXTZawKIXPMqme5I4T916kItB2vv-7R_joAyd3zXA-d4uabHBXLzFnJadJg97CKmh9enxkGeC3UfC5v6O4ndmxbcZ9JC4aG9A8JIYkOSSE7fDSDqVOXRjSPCWM9RrGgCfY9jS38Xh2P8B4T_ZEWIGFPlPAvDVGyzoAx-b0KA0NZpsr8EU9FSy7ktrP6KRCc4PKJS7U23Z4PY");'></div>
+</div>
+</div>
+</header>
+<main class="layout-container mx-auto flex w-full max-w-[1280px] grow flex-col p-4 pb-20 lg:p-6">
+<!-- Hero Cover -->
+<div class="relative w-full rounded-2xl overflow-hidden h-48 md:h-64 lg:h-72 group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Cozy sunlit living room blurred background with soft beige and orange tones" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLxyGaItKVhptNNmAnychRdMJV9JCEmU7WyywADIm_TwVbggWVwZoZ7oq0M3Ck2VWzAHEvQIZuMliCraxMhvFVmXMquFFpq214xxqFRbBx_pozxgSIQf7jVfj0fgxFelnTVI8UQUE9eWPyUxIBYjgr3KYCwC9gTSm7TB669Y5jqhrxmh0lrEs_Hb7Zg2SMcyAaditSz-YppaY-GLekopPLXXA3uU57PxXmJU_Ic_I8-Fknz1HMC8k9FwlemH1WydDLJ2kdqiZZJ2Rr');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+<button class="absolute top-4 right-4 bg-black/20 hover:bg-black/40 backdrop-blur-md text-white rounded-full p-2 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</button>
+</div>
+<!-- Profile Layout -->
+<div class="relative mt-4 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
+<!-- Left Sidebar (Sticky) -->
+<aside class="lg:col-span-4 xl:col-span-3">
+<div class="sticky top-24 flex flex-col gap-6">
+<!-- Identity Card -->
+<div class="relative flex flex-col items-center rounded-2xl bg-surface-light p-6 pt-0 text-center shadow-card border border-border-color">
+<!-- Avatar -->
+<div class="-mt-16 mb-4 relative">
+<div class="size-32 rounded-full border-[6px] border-surface-light bg-cover bg-center shadow-md" data-alt="Close up portrait of a fluffy cat with green eyes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpnV_E62hlK6cB8_ngVNjlR4XmuE_WBvEjQs8i6p_QwQfT5hlZZq_n-J5XXa6mlqalTc36cNcqzdGJGkNZNeBUmKhkor7eVsqvKhlpstqAryT6cQLawDGdiyEBAZS_UhNRf7R1-eJz1tdDeVd_ZhFHI3QMOtWwH8amuNJL4ns6VLwrptSiPPRU7pVt7Kr4AizwiBWBlpFgiqKI-Jdcv_mOt0XOo3UtAfSeqgP51MfCz2GheKnu-t2gcAqJ6U_PMiXmm0zZl5f2Xnfv');"></div>
+<div class="absolute bottom-2 right-1 flex size-8 items-center justify-center rounded-full bg-blue-500 text-white shadow-sm" title="Verified Good Boy">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<!-- Name & Tagline -->
+<h1 class="text-2xl font-extrabold tracking-tight text-text-main">Mittens the Destroyer</h1>
+<p class="mt-1 text-sm font-medium text-text-secondary flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            London, UK
+                        </p>
+<!-- Quick Stats Pill -->
+<div class="mt-4 flex flex-wrap justify-center gap-2">
+<span class="inline-flex items-center rounded-full bg-primary-light px-3 py-1 text-xs font-bold text-primary">British Shorthair</span>
+<span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-xs font-bold text-text-secondary">3 Years Old</span>
+</div>
+<!-- Action Buttons -->
+<div class="mt-6 flex w-full gap-3">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-full bg-primary py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-[1.02] active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px] filled">add</span>
+                                Follow
+                            </button>
+<button class="flex items-center justify-center rounded-full bg-gray-100 p-2.5 text-text-main hover:bg-gray-200 transition-colors" title="Message">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="flex items-center justify-center rounded-full bg-gray-100 p-2.5 text-text-main hover:bg-gray-200 transition-colors" title="Share Profile">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+<!-- Interactive Button -->
+<button class="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-primary/30 bg-white py-2.5 text-sm font-bold text-primary transition-colors hover:bg-primary-light/50">
+<span class="material-symbols-outlined filled text-[18px]">set_meal</span>
+                            Send a Treat 🐟
+                        </button>
+</div>
+<!-- Owner Card -->
+<div class="flex items-center gap-4 rounded-xl bg-surface-light p-4 shadow-card border border-border-color">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Portrait of Sarah the owner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8p2iaasbSM4TTH7jrNku1P4QBF4eadIT7GkEDAu1Nam0WfrJ5mNEZbin8FcIgDoduOd6mtxRU8ZjQiFLBPSL0bjWqh6d6ZpCv6NxypOoWRhAmLOfJW91KgJTFnYpYis81UYxzh3k2hKRDRoXqtitsVfzJvCniW_8hDh95LoEQr89JvCmuZPqhZttKBImvEmZIJ9fyPOZCCKFIefjuYF_d6NOH3SyYzP4eF0zJR2Jn50Syz9Lrrq33xqIUW8SpKQHi322AkbGu6RS1');"></div>
+<div class="flex-1">
+<p class="text-xs font-medium text-text-secondary uppercase tracking-wider">Managed by</p>
+<p class="text-sm font-bold text-text-main">Sarah Jenkins</p>
+</div>
+<button class="text-xs font-bold text-primary hover:underline">View</button>
+</div>
+<!-- Stats Widget -->
+<div class="grid grid-cols-3 gap-2 rounded-xl bg-surface-light p-4 shadow-card border border-border-color text-center">
+<div class="flex flex-col gap-1">
+<span class="text-xl font-bold text-text-main">1.2k</span>
+<span class="text-xs text-text-secondary">Followers</span>
+</div>
+<div class="flex flex-col gap-1 border-x border-border-color">
+<span class="text-xl font-bold text-text-main">450</span>
+<span class="text-xs text-text-secondary">Friends</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xl font-bold text-text-main">892</span>
+<span class="text-xs text-text-secondary">Treats</span>
+</div>
+</div>
+<!-- Friends / Connections -->
+<div class="rounded-xl bg-surface-light p-5 shadow-card border border-border-color">
+<div class="mb-4 flex items-center justify-between">
+<h3 class="text-sm font-bold text-text-main">Furiends</h3>
+<a class="text-xs font-bold text-primary hover:underline" href="#">See All</a>
+</div>
+<div class="grid grid-cols-4 gap-4 place-items-center">
+<!-- Friend 1 -->
+<div class="group flex cursor-pointer flex-col items-center gap-1">
+<div class="size-10 rounded-full ring-2 ring-white ring-offset-2 ring-offset-orange-100 bg-cover bg-center transition-transform group-hover:scale-110" data-alt="Small white kitten" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlVLy39_cNgG3gFKxWMS150nBqlvTOEHSbS2wLEvwUM3DF62W6gv6ZA6-lnz3sibajE8z16qTmNfNyiUuTBx6IP8nd4zYdWk7yGannZGXMOaEq00X2vHQ_NiqJkK6sxUHR-ioW804carXDjJPjSkO4LCa_blFJAQ4Ab1esZFN5MaigPeYEBizmJBF74Q_rR0XkDYL2PzCqy-1aQjwNR-36PAD5Vt4a5b4sEmvBPuuTFgIAnTaB23lCDerqWpqwlMTAMXv-nhxM60to');"></div>
+</div>
+<!-- Friend 2 -->
+<div class="group flex cursor-pointer flex-col items-center gap-1">
+<div class="size-10 rounded-full ring-2 ring-white ring-offset-2 ring-offset-orange-100 bg-cover bg-center transition-transform group-hover:scale-110" data-alt="Tabby cat looking sideways" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAE955K510f1b9undfmk8QM-au0To_fk50pgkZ4U0db8VXxyV6uGpULAlbNKk3kSDF4l6HgduZeRB-c-Iyowz55W87wW0UCrehldo7rBmyvglGSmPwESTl6M32qT3dwlURo2rJZwrg_Wz_H3_PudmTFjl5nVrQTVEsFk3gHXaIG7oK45K9N5cUYp1993SvqvkDCzuXAwNmofl94JL2TkebVwXLxF9KHHQq6MTMA_OElumly1jqTk2UeiY6XwZBpFJ0P1VSvtifiZQjr');"></div>
+</div>
+<!-- Friend 3 -->
+<div class="group flex cursor-pointer flex-col items-center gap-1">
+<div class="size-10 rounded-full ring-2 ring-white ring-offset-2 ring-offset-orange-100 bg-cover bg-center transition-transform group-hover:scale-110" data-alt="Orange cat with sunglasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlctBXPlteS-gzsYdVZbxeFBq7im9ZQBAYpMrvOBeEGKLtEEPdxWihgyvmp_8T7ca5biLnH6XsHtUCYP6iQ0sPaT5j4gGAIyA8ZeGQ8Nhq2hk8mOv7VmwQJllncKyau2jYifQD_AYDaeLbtRYNcLxN7OXaAULmIutiW8sZOPB41WFIRBZ0Oh_JMeKMMYLRoKs0x2VOg8hEY7PRRdoVqtFjJnzaGIvR4f5dKdX3UyaFhiDnGeM0pCjFJaqPxfDrkf01hq4D7_QITDPJ');"></div>
+</div>
+<!-- Friend 4 -->
+<div class="group flex cursor-pointer flex-col items-center gap-1">
+<div class="size-10 rounded-full ring-2 ring-white ring-offset-2 ring-offset-orange-100 bg-cover bg-center transition-transform group-hover:scale-110" data-alt="Black cat staring" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBu03dASsvvWdbb5bDvoMyHeAtlaGBd9hGT_7fwVfOhZigYHbVjHRimCeqSXuiAeNQsNhikIPTIzwt4VyI4jcGm2Bo7ByGJaqX1ox078DXVD5ASNkwMSGaa4wX72s8o-jzZSXfuE8NMVhd531Gd37KYcq8JPa_rPOePuy9yPK9FYzfdXUTL6RBem-u4uIHG34xZIHSHNIYEgmYMKo9MmvpG7PnDLCT3XEb208aX3_2bK8VdEd20aGchC8jF5a3hPWR-kLOXgZXOTosJ');"></div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex flex-col gap-6 lg:col-span-8 xl:col-span-9">
+<!-- About Section -->
+<section class="rounded-2xl bg-surface-light p-6 shadow-card border border-border-color">
+<h2 class="mb-4 text-xl font-bold text-text-main flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">pets</span>
+                        About Mittens
+                    </h2>
+<p class="text-base leading-relaxed text-text-main/80">
+                        Professional napper and amateur bug hunter. I tolerate the dog, but only just. Lover of tuna and sunlight patches. If I fits, I sits. Currently plotting world domination, starting with the kitchen counter.
+                    </p>
+<div class="mt-6">
+<h4 class="mb-3 text-xs font-bold uppercase tracking-wider text-text-secondary">Personality &amp; Traits</h4>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">bolt</span> Energetic
+                            </span>
+<span class="inline-flex items-center gap-1 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">restaurant</span> Foodie
+                            </span>
+<span class="inline-flex items-center gap-1 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">nightlight</span> Night Owl
+                            </span>
+<span class="inline-flex items-center gap-1 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">bug_report</span> Hunter
+                            </span>
+</div>
+</div>
+</section>
+<!-- Gallery / Moments Section -->
+<section>
+<div class="mb-4 flex items-center justify-between px-1">
+<h2 class="text-xl font-bold text-text-main">Moments</h2>
+<div class="flex gap-2">
+<button class="flex items-center gap-1 text-sm font-bold text-primary hover:underline">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+                                View All
+                            </button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
+<!-- Image 1 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cat peeking out of a cardboard box" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCj9S5-cbpKOreejlRcnZcBZb076yMfkFgVkxIqmA_ew2s0SN-DQzZHHSm2ScMNM8zVHM7g0XHh3smzDKVfDr_tAD3BMbsuYlGXf03Vfs5RW2VsDGPt_kEM7D6shXo84X4C1CdCMSeC6n521mzpH_aQVTEmYbw27Nnu3xF2JP8cSHyxfzcHXlp0aq2Mq6KLk2irWGnoyTzjzl8465Sw6GdVj76mFpT-OR6rWMIE2Qgtl7_B_aDPRKjvTswbIMv0a3RxZr9d379Pi1GK');"></div>
+<div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10"></div>
+</div>
+<!-- Image 2 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Two cats playing together on a rug" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDX9nhgtB5DCXy663FC6dQWU3Fy9PWeXaBEIbCIbtqd3r4cZhcAxsMwavbqDms4TFgIHlXWrY14iPHimW6y8qS0MOZIFiKGY1njvb0tkv4Ry2XXdGijyMMlhXKjjgEGjNbM8WzWi_IF9vSBuCX6EAO-WJfzc3hWZ9JqD_IIVsreFj-vDS70j880bxV1MfeRWf9QmRo0xH8hdXEGDP63Y8KN30nqocnZDZhg3rc1g5H1iyvplQEZwdPy8PD5Sk7pRh_55OQ0EPbqAgqP');"></div>
+</div>
+<!-- Image 3 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cat sleeping on a windowsill" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPsPoSxB3QSyYw7N45rosRukU18cAT83Dcwz07hy8ZXh4yuV7fNRHPmTJDZIwiZ5q_ZSP1QAd8iCqugKYa-SyvzMZdokupZcnlc-WSz-3Bf2QnHZ_YStswuJHXgxIJ0pZhwdnzdnVOHo4mU3R1fFodMPU4uey0H9VhUlEYTiKboigc8SK4zTqUR_a5Mce62Rbt0lw1gUYEGKX1O6gaX3X1HcDCDr2FtIMVPbStx3UI46AuBnxtZ8QYxG69lqVFkmFm-CgCYKCJuDuR');"></div>
+</div>
+<!-- Image 4 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of cat whiskers and nose" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuzTaVpdU0LyacaXSJrzeSlVQaeNQXm3v7Mi30UKDgki4z8fpTd-tpdNvrwaJermFuJrox9HXN05lOQ7UD90cJ1Ne-8p_vj4ff7g_-OVzf5sT50FAvO8phFw4YqgXT9XfSs67QHpzMPvBNrB-CDDBnqM-u1cLKu-6hQhFxx6Q1jMFUBo5ugq_SNwA5Heyi2891SJ4RO3q-izu_AUlY3z70wvo7y1I39R5dyjquKZjvXBs_-A52kvM1T53MbaUMInFlkm9Zc2En1Odm');"></div>
+</div>
+<!-- Image 5 (Video placeholder) -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cat jumping mid-air" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCArBDwpflVNmYpppPYjrMsIFzf-YGH1OsjnGlxBZh32uJ223uBOXr36TgrlyWmWnXLpE7o2fGtEA12esYpMbIjB37Ozwp4NxSFwkQZgmKGXceDzVlhNveNMD2HQZMhL6a4JrMowdy33XwyV0g8ziHWSlAK_EUOWvKDjQgmFk12jvJ-tghx_gdzOpczCj-OgIC_wlIoXEgeJy4z-FqvgtUKieow0a9VgwMGKRDbxiGpAl0Wp4HhVn-8qHo7L8XcRXwrtCkGsiufUKy4');"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
+<div class="flex size-10 items-center justify-center rounded-full bg-white/90 text-primary shadow-lg backdrop-blur-sm">
+<span class="material-symbols-outlined filled">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- Image 6 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cat wearing a small bowtie" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWW092FizOTmOEEHMPa8fA_-UR9p5Nrcg6TLBoIs19jziwusXq-oF9h4-Qir-rMlc5VjgPP_yyLRfOUVCJrY-MGb5aWdrm7CU_3dHBtN2HNClIckEoggloZ0WJ_mlybTQpqUI8wfxTyzgPqAXRPPu24SAuVYlrGePQig0Y2MGJ16tzPgoytD_DHVc2E0-Owz1GW1-tEg7ltIsjG5mXuNU4Hu6jNYFKIwV-ZtYrBn1X4FpjYME7VQ2ZidiYpfaa3FHIWNlW2IDYTTgJ');"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
+<span class="text-sm font-bold text-white">+12 More</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Updates Feed -->
+<section>
+<h2 class="mb-4 px-1 text-xl font-bold text-text-main">Latest Updates</h2>
+<div class="flex flex-col gap-6">
+<!-- Post 1 -->
+<article class="flex flex-col rounded-2xl bg-surface-light shadow-card border border-border-color overflow-hidden">
+<!-- Post Header -->
+<div class="flex items-center justify-between p-4 pb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Avatar of Mittens" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBihem65hdQNCterLQ3KrCI6J4kbXyR__gCh6dhim8IhC9Qqgkpqgib6L5bx4sgck-ms8Oj4vOPu2vKNOJCxkRD5_gd4x5cl8nmpZ9_QyYdoRnhiPLIWy0wUiFwkT_T4x3qaURYbe45oZkCUfl7hpCOV75THOPK6_Dt3uauh_rH5yMsAP91-V9rH-nhORPFHt885izsdZIeZD6YlArjkByJYOkbm99B1c1ld6k4b-kHIld3xmkfiAvrmeD_Pc-MF56s2-RzD_Zg98K0');"></div>
+<div>
+<p class="text-sm font-bold text-text-main">Mittens the Destroyer</p>
+<p class="text-xs text-text-secondary">2 hours ago • London</p>
+</div>
+</div>
+<button class="rounded-full p-1 text-text-secondary hover:bg-gray-100">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Post Content -->
+<div class="px-4 pb-3">
+<p class="text-sm text-text-main">Just caught the red dot! ...Wait, nevermind, it's on the ceiling now. The audacity. 🔴🙀 #RedDotNemesis #Caturday</p>
+</div>
+<!-- Post Media -->
+<div class="h-64 w-full bg-gray-100 bg-cover bg-center sm:h-80" data-alt="Cat looking up intently at a red dot on the wall" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDmKYAA97OCuEKp7ZOXSyOxT6F54Y1GF3D7PhGX-iHcrrRHzUtKX7uLQKrAUkqx3RROA_u_k9opi5ke2BT0w2aPAyRM_g-Hbwvnwx3iEDx5xCSdq47z3zjbwnROHPaSFOZ1drOgiSM1XrEba804p3W_zyqu0lqUqDFmrD6qTS69N3tKl91NXn6zf8U7u9J878-w-VDLAvekjt-XHFp6C_lSAUVPueweTFW-s8_5xX8wZRvWb9IDy-LkDPIjYzM8Z3YSnPZ4GGKTxHy');"></div>
+<!-- Post Actions -->
+<div class="flex items-center gap-6 border-t border-border-color px-4 py-3">
+<button class="flex items-center gap-1.5 text-sm font-semibold text-text-secondary hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">favorite</span>
+<span>243</span>
+</button>
+<button class="flex items-center gap-1.5 text-sm font-semibold text-text-secondary hover:text-text-main transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">chat_bubble</span>
+<span>42</span>
+</button>
+<button class="flex items-center gap-1.5 text-sm font-semibold text-text-secondary hover:text-text-main transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="flex flex-col rounded-2xl bg-surface-light shadow-card border border-border-color overflow-hidden">
+<div class="flex items-center justify-between p-4 pb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Avatar of Mittens" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6nOxreGxvIG-pkE2ry7OPUYwTKoNQXHv6NxE0n8W32AYxiDdOk8mH_kVKEX_MaYljrsMn_uwKhvrWv-7P-3k8tesRqIfbqEVphivnc7RU9nFFE53CQXPjnqSP6r4987QYoaK6AKEGT868rY4d54mJIreNzk-NWSNEZtSsyfid9w_dAmNdBXE0U58RU5ZRMVWczMKv-RYNLZBcnuWi_5W9UhbyjK2m1P_Cs8aW_p-bAwoH5nJncc8ceqP6VZyhm9_bD4CL5ETnODaC');"></div>
+<div>
+<p class="text-sm font-bold text-text-main">Mittens the Destroyer</p>
+<p class="text-xs text-text-secondary">Yesterday • Park Walk</p>
+</div>
+</div>
+<button class="rounded-full p-1 text-text-secondary hover:bg-gray-100">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="px-4 pb-3">
+<p class="text-sm text-text-main">Ventured into the garden today. The grass was suspiciously wet. 0/10 would not recommend touching with paws. 🌿💦</p>
+</div>
+<!-- Text only post or maybe small link preview? Let's keep it simple for design -->
+<div class="flex items-center gap-6 border-t border-border-color px-4 py-3">
+<button class="flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[20px] filled group-hover:scale-110 transition-transform">favorite</span>
+<span>892</span>
+</button>
+<button class="flex items-center gap-1.5 text-sm font-semibold text-text-secondary hover:text-text-main transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">chat_bubble</span>
+<span>115</span>
+</button>
+<button class="flex items-center gap-1.5 text-sm font-semibold text-text-secondary hover:text-text-main transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="mt-auto border-t border-border-color bg-surface-light py-8">
+<div class="layout-container mx-auto max-w-[1280px] px-6 text-center">
+<div class="flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
+<div class="flex items-center gap-2 text-text-main opacity-80">
+<span class="material-symbols-outlined">pets</span>
+<span class="text-sm font-semibold">© 2024 Cats.directory</span>
+</div>
+<div class="flex gap-6">
+<a class="text-sm text-text-secondary hover:text-primary" href="#">About</a>
+<a class="text-sm text-text-secondary hover:text-primary" href="#">Privacy</a>
+<a class="text-sm text-text-secondary hover:text-primary" href="#">Terms</a>
+<a class="text-sm text-text-secondary hover:text-primary" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

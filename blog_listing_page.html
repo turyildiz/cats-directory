@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cats.directory - Blog</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#221910",
+                        "text-main": "#1b140d",
+                        "text-secondary": "#9a734c",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal chips */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-[#f3ede7] bg-[#fcfaf8]/95 backdrop-blur-sm dark:bg-[#221910]/95 dark:border-[#3a2e22]">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<svg class="h-8 w-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight text-text-main dark:text-white">Cats.directory</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200" href="#">Home</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200" href="#">Directory</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200" href="#">Social Feed</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200" href="#">Login</a>
+</nav>
+<button class="hidden sm:flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary/90 focus:ring-4 focus:ring-primary/30">
+                Join Community
+            </button>
+<button class="flex md:hidden items-center justify-center text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="@container">
+<div class="flex flex-col gap-6 rounded-2xl bg-[#f3ede7] p-6 dark:bg-[#2e2419] md:flex-row md:items-center md:gap-12 md:p-10 lg:p-12">
+<div class="h-64 w-full flex-shrink-0 overflow-hidden rounded-xl bg-cover bg-center shadow-md md:h-80 md:w-1/2 lg:w-[480px]" data-alt="Close up of a fluffy cat reading a book with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzhVIgnWjWD522CwabaZr9wUyfAbrC8G_l7lqfoOYuNovHlzzY4JXIYbf6qE8LG5FyccqslZbpIlXIjKTbfdf3LLe6iPZbEkb9BZlUNDn8nJOY_kIi9iKZkGlRLbDhMSluEVkYaqd8LZBu-fKFRdfMVEPOwkKLAaFZvTmDT4Ja_HKkVe-W2a5RKV3GY68QnmJj7QkRlD3CtrzczT0_wkSLsCyndwIyI-jZ9F9TzyToK7PGqhigEurPP8MM2mCWaJq-opAUikZ5K9Jt");'></div>
+<div class="flex flex-col gap-5 md:items-start md:text-left">
+<div>
+<span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary dark:bg-primary/20 dark:text-primary-light">Featured Article</span>
+<h1 class="text-3xl font-black leading-tight tracking-tight text-text-main dark:text-white sm:text-4xl md:text-5xl">
+                                Purr-fect Reading
+                            </h1>
+</div>
+<h2 class="text-base font-normal leading-relaxed text-text-secondary dark:text-gray-300 md:text-lg">
+                            The Latest in Feline Care &amp; Culture. Discover tips, stories, and reviews for your furry friend, curated by experts.
+                        </h2>
+<div class="flex gap-4">
+<button class="flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-all hover:bg-primary/90 focus:ring-4 focus:ring-primary/30">
+                                Start Reading
+                            </button>
+<button class="hidden items-center justify-center rounded-lg border border-[#e5ded6] bg-transparent px-6 py-3 text-sm font-bold text-text-main transition-all hover:bg-[#e5ded6]/50 dark:border-[#4a3b2a] dark:text-gray-200 dark:hover:bg-[#4a3b2a]/50 sm:flex">
+                                View Categories
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Search and Filter Section -->
+<section class="sticky top-16 z-40 w-full border-b border-[#f3ede7] bg-[#fcfaf8]/95 backdrop-blur-sm dark:bg-[#221910]/95 dark:border-[#3a2e22]">
+<div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+<!-- Categories -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 sm:pb-0 w-full sm:w-auto">
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white shadow-sm transition-colors">
+                        All
+                    </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-[#f3ede7] px-4 text-sm font-medium text-text-main transition-colors hover:bg-[#e5ded6] dark:bg-[#3a2e22] dark:text-gray-200 dark:hover:bg-[#4a3b2a]">
+                        Health
+                    </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-[#f3ede7] px-4 text-sm font-medium text-text-main transition-colors hover:bg-[#e5ded6] dark:bg-[#3a2e22] dark:text-gray-200 dark:hover:bg-[#4a3b2a]">
+                        Grooming
+                    </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-[#f3ede7] px-4 text-sm font-medium text-text-main transition-colors hover:bg-[#e5ded6] dark:bg-[#3a2e22] dark:text-gray-200 dark:hover:bg-[#4a3b2a]">
+                        Nutrition
+                    </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-[#f3ede7] px-4 text-sm font-medium text-text-main transition-colors hover:bg-[#e5ded6] dark:bg-[#3a2e22] dark:text-gray-200 dark:hover:bg-[#4a3b2a]">
+                        Training
+                    </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-[#f3ede7] px-4 text-sm font-medium text-text-main transition-colors hover:bg-[#e5ded6] dark:bg-[#3a2e22] dark:text-gray-200 dark:hover:bg-[#4a3b2a]">
+                        Products
+                    </button>
+</div>
+<!-- Search Bar -->
+<div class="w-full sm:max-w-xs">
+<label class="relative flex h-10 w-full items-center overflow-hidden rounded-lg bg-[#f3ede7] focus-within:ring-2 focus-within:ring-primary/50 dark:bg-[#3a2e22]">
+<div class="absolute left-3 flex items-center text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="h-full w-full border-none bg-transparent pl-10 pr-4 text-sm text-text-main placeholder-text-secondary focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Search articles..." type="text"/>
+</label>
+</div>
+</div>
+</section>
+<!-- Blog Grid -->
+<section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<!-- Card 1 -->
+<article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] dark:bg-[#2e2419]">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a happy cat blinking slowly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWLPq4MLPgef68oLIlDA6MJVJb30EVZkphrc37cqrJn61QYr9XIzC91SeAjOhfN9IQkElzaj8pvd2dr5rSq7l0tQMqCGoEHqZ684ycCWK_JHgfhp7cW_kZa2yXxe_2Li0pBca2MjJaTXuQE5bQJenrsg7DQZExUDpgV9Zy0FcmpM5aYMzv5TzSsbiyGfGLS2q5CD94xzZ3hssAouxD2o-gbJPHedWU-Z-_Lvl4y0cjrSN1czBzDuEy5GnhprdbyyvIgNjKekh9FMvo");'></div>
+<div class="absolute left-4 top-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-[#221910]/90 dark:text-white">
+                            Behavior
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="mb-3 flex items-center gap-2 text-xs font-medium text-text-secondary dark:text-gray-400">
+<span>5 min read</span>
+<span>•</span>
+<span>Oct 24, 2023</span>
+</div>
+<h3 class="mb-3 text-xl font-bold leading-tight text-text-main transition-colors group-hover:text-primary dark:text-white">
+                            5 Signs Your Cat is Actually Happy
+                        </h3>
+<p class="mb-6 line-clamp-3 text-sm leading-relaxed text-text-secondary dark:text-gray-300">
+                            Understanding your feline's body language is key to a happy relationship. Learn the subtle cues like the slow blink, the tail position, and kneading.
+                        </p>
+<div class="mt-auto flex items-center justify-between border-t border-[#f3ede7] pt-4 dark:border-[#3a2e22]">
+<div class="flex items-center gap-2">
+<img alt="Author Dr. Sarah" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATy3GWF-QAbyWOB19uiLLDWY2gx76RIfGlmnPJ8hlablpsu-ewXMANz46-RAil0SqhsucZf7jfyoUvQYCTPLcoYoJGOiO1gkJANCHgMcmx1Uf-h1ED40DctziTUW-At_bFsbvj65KbvgbXLeAxGtemfdJI7AKMUfVddFHfZFbdx8HKz6F9B_LbWt-m-T0J1O-_ASyDPAXESpaCD4gat6E4JDNe592GCr1EaaL-5_aUihPzUW2MslTTwQfEBxjOi6MzpZSysl6Evd0u"/>
+<span class="text-xs font-semibold text-text-main dark:text-gray-200">Dr. Sarah Whiskers</span>
+</div>
+<span class="flex items-center text-sm font-bold text-primary">
+                                Read <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] dark:bg-[#2e2419]">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Bowl of high quality cat food with fresh ingredients" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDMH0uBm4s1Z7XNb1Bs3PBr_3h6LZ2U_FPXFyRyWtYkerqbnK1_F2NsQlyYZBv-Y6LFMQ065KUzaLW6fmo2Ch_I5NgrjbUA5HAMrOA70J46EFZsyqlyPLCwn1oAZtguHdJof_zyo0KAs01cODfy8vzB04vbTh0xKRZjO70-prp-mj1ZIVqb7BaPfaXbRWWQEixTJGfmI2f15kB95qHBtzAunCGvGgE_eNH85M-VQnaMLXx3He5bsHiYYyzgDye5-ikc79e_h4RhIcf");'></div>
+<div class="absolute left-4 top-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-[#221910]/90 dark:text-white">
+                            Nutrition
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="mb-3 flex items-center gap-2 text-xs font-medium text-text-secondary dark:text-gray-400">
+<span>8 min read</span>
+<span>•</span>
+<span>Oct 20, 2023</span>
+</div>
+<h3 class="mb-3 text-xl font-bold leading-tight text-text-main transition-colors group-hover:text-primary dark:text-white">
+                            The Ultimate Guide to Grain-Free Diets
+                        </h3>
+<p class="mb-6 line-clamp-3 text-sm leading-relaxed text-text-secondary dark:text-gray-300">
+                            Is grain-free really better for your cat? We dive deep into the nutritional science, consult with vets, and review top brands to help you decide.
+                        </p>
+<div class="mt-auto flex items-center justify-between border-t border-[#f3ede7] pt-4 dark:border-[#3a2e22]">
+<div class="flex items-center gap-2">
+<img alt="Author Mark" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA21sqz-z73GwFs1TDbxZpFnPyKx-dJUET34-sGoVdepQr4rJnZAtpNKff6Tdy_S9wBl3X2IuMuMXoupN77aVFwmzyDiULDn0yK0Swji9U4tp5qWAAc4mzHMhiP3pbBe9gGvHRJi-briqhpjn1bsbDWQEJyUYIshzq9upJSRawgqH-xwHJnC-jpsJQ2jRu22qdiOK7IQOZRuOWMRBqKSpV95GxLHy0dY7w2m7NiKtBbZkpbX_Xh782rdweuB2F5nAspfRUnCQt7f5_j"/>
+<span class="text-xs font-semibold text-text-main dark:text-gray-200">Mark Tabby</span>
+</div>
+<span class="flex items-center text-sm font-bold text-primary">
+                                Read <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] dark:bg-[#2e2419]">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Cat playing with a feather toy in a living room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYqvKVS8UYuvcWELEUXoU2s0la00bGpr7f0y1WI2Sc74QtBcrImkoJFDaODMKAA5ruTmo7FIaDELg4l3QQrT6VFr2iP-C9N-3FFKQR6_6dmx49voO3SEBaJ5xgiFegfIU_i79JzmVE_zRZz--vPKYb9sYXvmiEwVAKVdNrwg6RdwOWnHO6ByDUG2E7Q5MgTzPcGUWAKFQS-BTqGnDULMVczNAl-M4ES0lDIbMZKTj2Yyyxk3cE5OT7OL4A60wdmoI10ULTe0pJKd2V");'></div>
+<div class="absolute left-4 top-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-[#221910]/90 dark:text-white">
+                            Training
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="mb-3 flex items-center gap-2 text-xs font-medium text-text-secondary dark:text-gray-400">
+<span>4 min read</span>
+<span>•</span>
+<span>Oct 18, 2023</span>
+</div>
+<h3 class="mb-3 text-xl font-bold leading-tight text-text-main transition-colors group-hover:text-primary dark:text-white">
+                            Understanding the "Zoomies": Why They Happen
+                        </h3>
+<p class="mb-6 line-clamp-3 text-sm leading-relaxed text-text-secondary dark:text-gray-300">
+                            Frenetic Random Activity Periods (FRAPs) are normal, but why do they happen at 3 AM? Here is what you need to know about your cat's burst of energy.
+                        </p>
+<div class="mt-auto flex items-center justify-between border-t border-[#f3ede7] pt-4 dark:border-[#3a2e22]">
+<div class="flex items-center gap-2">
+<img alt="Author Jenny" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZMYtOFDUWfCbMOAdquvcdFAa0DHktvbhftVVivuMmU08Bq7BfnPi3aPlE6g2t4kp5Y00x6vCAE3xau6j-b9jBFbo_pYik-O4fLBBzanem1FeQJztbDhSmn1bWLZ_GwYJiNCPTk16uK4LKSffHZEVybvtzxGNC9fu0oz53BDt5ZdxTy4P6lmXxh92W9WayCT4nln--oBbyfHeX0Ech3DndbinVD03kT8ZE-G9nY_8q8mOxmQ6aQsokE_h4Bz0BSs9pDZqR9GEfmHYw"/>
+<span class="text-xs font-semibold text-text-main dark:text-gray-200">Jenny Paws</span>
+</div>
+<span class="flex items-center text-sm font-bold text-primary">
+                                Read <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] dark:bg-[#2e2419]">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A clean modern litter box setup in a bathroom" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDz_j7s5esDuZx7G9K2XSzA5G40qLW-lFjIwuQZlY8Qs4Sy8QnQZktk9w084x_C49ujfs5yHxdNvapdhvmUEIl7OODor96pWEEvADs-COsXrIDWhF1uep_fGPGeNDIWp5Qr1Txm1PEvPN1MiBQZxG-N0U-zl0fmjS3Zba9oJQVz0Dnw8YMRIHCVwSzru16acucE53wrvYZt2Bf3NiGyxCok2gPcC5NbIUzv9Dgb_SnmWcFUOqHxwbSWaYjyva4nP2ZX1MFXWrCcMLSk");'></div>
+<div class="absolute left-4 top-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-[#221910]/90 dark:text-white">
+                            Products
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="mb-3 flex items-center gap-2 text-xs font-medium text-text-secondary dark:text-gray-400">
+<span>6 min read</span>
+<span>•</span>
+<span>Oct 15, 2023</span>
+</div>
+<h3 class="mb-3 text-xl font-bold leading-tight text-text-main transition-colors group-hover:text-primary dark:text-white">
+                            Top 10 Self-Cleaning Litter Boxes of 2024
+                        </h3>
+<p class="mb-6 line-clamp-3 text-sm leading-relaxed text-text-secondary dark:text-gray-300">
+                            We tested the most popular automatic litter boxes on the market. Find out which ones are worth the investment and which ones are just hype.
+                        </p>
+<div class="mt-auto flex items-center justify-between border-t border-[#f3ede7] pt-4 dark:border-[#3a2e22]">
+<div class="flex items-center gap-2">
+<img alt="Author Alex" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVHv8XrnnXEzaLsiJCjPgqvhxbVoP7yVDOTLR3gbIVBvfmAoZ39L8KIM1BR33vKgXpNvIheKXGH_41ja6VXxO26zy89W-HDJ6A8M-aB7XpYjR9MgCjVeVig9TEaoNmkrDUSuob0OE8mbEk0tPyPr5isHDRhBMNtvPMK9AJWOzuRFjz6ka4Fw5UTcBWD-GE4pkgAEp9tCrTThaiGCAulWm48FcveWrJOy-74LbDfeDMB7Nnfw_mTfm49ABLV8nmw6qFhekM4moG6IkP"/>
+<span class="text-xs font-semibold text-text-main dark:text-gray-200">Alex Meow</span>
+</div>
+<span class="flex items-center text-sm font-bold text-primary">
+                                Read <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] dark:bg-[#2e2419]">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Cat sitting on a window sill looking at birds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEy9XrxkZP2qserjprYvWCGnokVs_NI_P-3R6dM_ntK380m18aC_etFwGg9zipmADZkDNMbycOZX_WJK6MfZOyJktQdfLLZAWv8pv6eO7JIf_rJCUk2yoERnwSntdr-cpQKT1rqwkrmeOX6H1YXjFh4w82Tbdl8liQwhMBnOVq_Pwk7BHM1THVquTi9Ih1BB5BA0JIiEpIuf-oSZWRaLFkLcPZltWKbeV-psnPHcDeQlbuJJT7EgK2YYR5jP06D4KHIHnhDodBGHjP");'></div>
+<div class="absolute left-4 top-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-[#221910]/90 dark:text-white">
+                            Environment
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="mb-3 flex items-center gap-2 text-xs font-medium text-text-secondary dark:text-gray-400">
+<span>3 min read</span>
+<span>•</span>
+<span>Oct 12, 2023</span>
+</div>
+<h3 class="mb-3 text-xl font-bold leading-tight text-text-main transition-colors group-hover:text-primary dark:text-white">
+                            Enrichment 101: Keeping Indoor Cats Stimulated
+                        </h3>
+<p class="mb-6 line-clamp-3 text-sm leading-relaxed text-text-secondary dark:text-gray-300">
+                            Indoor cats live longer, but they need stimulation to avoid boredom. Here are simple DIY hacks to create a jungle gym in your apartment.
+                        </p>
+<div class="mt-auto flex items-center justify-between border-t border-[#f3ede7] pt-4 dark:border-[#3a2e22]">
+<div class="flex items-center gap-2">
+<img alt="Author Tom" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPYenNCpPte8-VtE5qts4A2HkfUrRB1SziMwyPcoz8rx3U5Kz27YMev5WXFleWXuUNYpcYKiaosXnz7AqTA0CK-yUgIQRrfahVOk0mGaS6k2OVY9Ce-Qj9LEQeYiwNx2hgo9msK_OTS5PwOrE6IoXBgqr4KjNfdyTie5uBIF4cJF0a2HBK4HJraAkYFX2R_6BjY1V9sGj6McSB4KNlYzZqlpvfRUK9c13oZdNaLPGzTI-fc2ZorB2v1tEzY3tNjNvaCFYa6PE4c3Dg"/>
+<span class="text-xs font-semibold text-text-main dark:text-gray-200">Tom Whisker</span>
+</div>
+<span class="flex items-center text-sm font-bold text-primary">
+                                Read <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] dark:bg-[#2e2419]">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Veterinarian examining a cat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpNJtuqwQzaNJmcUmJOf7Wg3sHHYYSwQcbm13sYbSt--gjZBUV1nt4ZdvczPYSUhyyFS_vQ6z5SnHD7gJrhHNnY6INUgJ2sFG8dEUuMXq8yDNQSqVY08ZL9IZQ0IZWFT1fYd_18VggLgpAEK88DARvUpcpGdZsRo7TOGGjnr6ZBJ9GK3jJBS-0CURC1ZCDNyheW3U6qkwMY77SYtEmcT33z-G0C-lu1kA6jixorQj62v7Ct6jHYTTbMRndZKgOH90IrHl1lLDgDJg6");'></div>
+<div class="absolute left-4 top-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-[#221910]/90 dark:text-white">
+                            Health
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="mb-3 flex items-center gap-2 text-xs font-medium text-text-secondary dark:text-gray-400">
+<span>10 min read</span>
+<span>•</span>
+<span>Oct 08, 2023</span>
+</div>
+<h3 class="mb-3 text-xl font-bold leading-tight text-text-main transition-colors group-hover:text-primary dark:text-white">
+                            Regular Vet Visits: What to Expect
+                        </h3>
+<p class="mb-6 line-clamp-3 text-sm leading-relaxed text-text-secondary dark:text-gray-300">
+                            Preventative care is the best way to ensure your cat lives a long, healthy life. We outline the standard checkup procedures for every age.
+                        </p>
+<div class="mt-auto flex items-center justify-between border-t border-[#f3ede7] pt-4 dark:border-[#3a2e22]">
+<div class="flex items-center gap-2">
+<img alt="Author Dr. Sarah" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxncbzDQ1nNXeAzpkbT2vhlja-vNgCWEBU9xFAyu3REzfINkjjtd9Kdu6Z05U9Q_gBNQF7eBik1nVzZJ_WT18vYA4wR3TDlazNC_cxJhyi7FccchKwJrOEl_s_CW7xItwqENg8Gc_uPsw7UWMCT0DQ6SocqsATqn6anMaNWwB8jhDhXH20e-Zj1n-WT6DC8zKYJeSArUgspB4aUok6IkBeKH-dHFS80xyMwHT8PksYgQvBjJ1wOE3n04fFtliUIqjGm2b22oQbrp72"/>
+<span class="text-xs font-semibold text-text-main dark:text-gray-200">Dr. Sarah Whiskers</span>
+</div>
+<span class="flex items-center text-sm font-bold text-primary">
+                                Read <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="relative overflow-hidden rounded-2xl bg-[#ee8c2b]/10 px-6 py-12 dark:bg-[#ee8c2b]/20 sm:px-12 sm:py-16">
+<!-- Decorative abstract pattern -->
+<div class="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-[#ee8c2b]/10 blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 h-64 w-64 rounded-full bg-[#ee8c2b]/10 blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center justify-center gap-6 text-center">
+<h2 class="text-3xl font-black text-text-main dark:text-white sm:text-4xl">
+                        Weekly Meows in Your Inbox
+                    </h2>
+<p class="max-w-xl text-base font-medium text-text-secondary dark:text-gray-200">
+                        Join 50,000+ cat lovers. Get the latest articles, product discounts, and cute cat videos delivered to you every Friday.
+                    </p>
+<form class="flex w-full max-w-md flex-col gap-3 sm:flex-row">
+<input class="h-12 w-full flex-1 rounded-lg border-none bg-white px-4 text-text-main placeholder-text-secondary shadow-sm focus:ring-2 focus:ring-primary dark:bg-[#2e2419] dark:text-white dark:placeholder-gray-400" placeholder="Enter your email address" required="" type="email"/>
+<button class="h-12 w-full rounded-lg bg-primary px-6 font-bold text-white transition-all hover:bg-primary/90 focus:ring-4 focus:ring-primary/30 sm:w-auto" type="submit">
+                            Subscribe
+                        </button>
+</form>
+<p class="text-xs text-text-secondary dark:text-gray-400">No spam, just purrs. Unsubscribe anytime.</p>
+</div>
+</div>
+</section>
+<!-- Pagination -->
+<section class="mb-16 flex justify-center px-4">
+<nav class="flex items-center gap-2">
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#f3ede7] bg-white text-text-secondary transition-colors hover:bg-[#f3ede7] dark:border-[#3a2e22] dark:bg-[#2e2419] dark:text-gray-400 dark:hover:bg-[#3a2e22]" href="#">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary font-bold text-white shadow-md" href="#">1</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#f3ede7] bg-white font-medium text-text-main transition-colors hover:bg-[#f3ede7] dark:border-[#3a2e22] dark:bg-[#2e2419] dark:text-gray-200 dark:hover:bg-[#3a2e22]" href="#">2</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#f3ede7] bg-white font-medium text-text-main transition-colors hover:bg-[#f3ede7] dark:border-[#3a2e22] dark:bg-[#2e2419] dark:text-gray-200 dark:hover:bg-[#3a2e22]" href="#">3</a>
+<span class="flex h-10 w-10 items-center justify-center text-text-secondary">...</span>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#f3ede7] bg-white font-medium text-text-main transition-colors hover:bg-[#f3ede7] dark:border-[#3a2e22] dark:bg-[#2e2419] dark:text-gray-200 dark:hover:bg-[#3a2e22]" href="#">12</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#f3ede7] bg-white text-text-secondary transition-colors hover:bg-[#f3ede7] dark:border-[#3a2e22] dark:bg-[#2e2419] dark:text-gray-400 dark:hover:bg-[#3a2e22]" href="#">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</nav>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-[#f3ede7] bg-white py-12 dark:bg-[#1a130c] dark:border-[#3a2e22]">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 text-primary">
+<svg class="h-6 w-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<span class="text-lg font-bold text-text-main dark:text-white">Cats.directory</span>
+</div>
+<p class="text-sm leading-relaxed text-text-secondary dark:text-gray-400">
+                        The world's largest directory for cat lovers. Find vets, groomers, and sitters near you.
+                    </p>
+</div>
+<div>
+<h4 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Company</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">About Us</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Careers</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Press</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Resources</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Blog</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Breed Guide</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Name Generator</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Forum</a></li>
+</ul>
+</div>
+<div>
+<h4 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Legal</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary dark:text-gray-400" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#f3ede7] pt-8 dark:border-[#3a2e22] sm:flex-row">
+<p class="text-sm text-text-secondary dark:text-gray-500">© 2024 Cats.directory. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-text-secondary hover:text-primary dark:text-gray-500" href="#">
+<span class="sr-only">Facebook</span>
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+</a>
+<a class="text-text-secondary hover:text-primary dark:text-gray-500" href="#">
+<span class="sr-only">Twitter</span>
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
+</a>
+<a class="text-text-secondary hover:text-primary dark:text-gray-500" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.315 2zm-3.196 8.42a4.487 4.487 0 00-1.226 3.167c0 2.485 2.016 4.5 4.502 4.5 2.486 0 4.502-2.015 4.502-4.5 0-1.25-.51-2.38-1.332-3.197A4.475 4.475 0 0012.396 9c-1.248 0-2.376.507-3.197 1.32l-.08.098zM12.4 10.8a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zm5.727-4.126a1.08 1.08 0 110 2.16 1.08 1.08 0 010-2.16z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
