@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Purrfect Paws Clinic — Cats.directory</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { primary:"#e77e23","primary-hover":"#d16b14","primary-light":"#fdf3eb","bg":"#fcfaf8","surface":"#ffffff","text-main":"#1b140e","text-sec":"#97704e","border-col":"#f3ede7","dark-bg":"#1b140e" },
+    fontFamily: { display:["Be Vietnam Pro","sans-serif"], sans:["Be Vietnam Pro","sans-serif"] },
+    borderRadius: { DEFAULT:"1rem", sm:"0.5rem", md:"0.75rem", lg:"1.5rem", xl:"2rem", "2xl":"3rem", full:"9999px" },
+    boxShadow: { card:"0 2px 12px -2px rgba(27,20,14,0.06),0 1px 4px -1px rgba(27,20,14,0.04)", soft:"0 8px 32px -4px rgba(27,20,14,0.10),0 2px 8px -2px rgba(27,20,14,0.06)", hover:"0 20px 48px -8px rgba(27,20,14,0.16),0 6px 16px -4px rgba(27,20,14,0.08)", orange:"0 8px 24px -4px rgba(231,126,35,0.40)" }
+  }}
+};
+</script>
+<style>
+  body { font-family:"Be Vietnam Pro",sans-serif; background:#fcfaf8; color:#1b140e; }
+  .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .filled { font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .img-zoom { transition:transform 0.6s cubic-bezier(.25,.46,.45,.94); }
+  .group:hover .img-zoom { transform:scale(1.06); }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 w-full border-b border-border-col bg-bg/85 backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between gap-6 px-6 lg:px-8">
+    <a href="Homepage.html" class="flex items-center gap-3 shrink-0 group">
+      <div class="size-8 text-primary transition-transform duration-200 group-hover:scale-110">
+        <svg fill="currentColor" viewBox="0 0 48 48"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"/></svg>
+      </div>
+      <span class="text-xl font-bold tracking-tight text-text-main">Cats<span class="text-primary">.directory</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 flex-1 justify-center">
+      <a href="Homepage.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Home</a>
+      <a href="Homepage.html#explore" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Explore</a>
+      <a href="Business Profile.html" class="px-4 py-2 rounded-full text-sm font-semibold text-primary bg-primary-light">Directory</a>
+      <a href="Blog.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="hidden lg:flex items-center gap-2 h-10 rounded-full bg-border-col px-4 w-52 focus-within:ring-2 focus-within:ring-primary/25 focus-within:bg-white">
+        <span class="material-symbols-outlined text-text-sec text-[20px]">search</span>
+        <input type="text" placeholder="Search businesses…" class="bg-transparent border-none text-sm text-text-main placeholder-text-sec focus:ring-0 focus:outline-none w-full"/>
+      </div>
+      <a href="#" class="hidden sm:flex h-10 items-center px-5 rounded-full border border-border-col text-sm font-bold text-text-main hover:bg-border-col transition-colors">Log In</a>
+      <a href="#" class="flex h-10 items-center px-5 rounded-full bg-primary text-white text-sm font-bold shadow-orange hover:bg-primary-hover transition-all active:scale-95">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<main class="pb-24">
+
+  <!-- HERO BANNER -->
+  <div class="w-full h-56 md:h-80 overflow-hidden relative group">
+    <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+    <div class="absolute top-5 left-6 flex items-center gap-2 text-white/80 text-sm font-medium">
+      <a href="Homepage.html" class="hover:text-white">Home</a>
+      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      <span class="text-white font-bold">Purrfect Paws Clinic</span>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+
+    <!-- FLOATING PROFILE CARD -->
+    <div class="relative -mt-16 md:-mt-20 mb-8">
+      <div class="bg-surface rounded-2xl border border-border-col shadow-soft p-6 flex flex-col md:flex-row items-start md:items-end gap-6">
+        <!-- Avatar -->
+        <div class="relative -mt-16 shrink-0">
+          <div class="size-28 rounded-2xl border-4 border-surface bg-cover bg-center shadow-soft overflow-hidden" style="background-image:url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&auto=format&fit=crop&q=80');"></div>
+          <div class="absolute -bottom-1 -right-1 size-7 rounded-full bg-blue-500 text-white flex items-center justify-center border-2 border-surface">
+            <span class="material-symbols-outlined filled text-[14px]">verified</span>
+          </div>
+        </div>
+        <!-- Info -->
+        <div class="flex-1">
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Purrfect Paws Clinic</h1>
+            <span class="text-xs font-bold uppercase tracking-wide bg-blue-50 text-blue-600 px-3 py-1 rounded-full">Veterinary</span>
+          </div>
+          <p class="text-sm text-text-sec flex items-center gap-1 mb-2">
+            <span class="material-symbols-outlined text-[16px]">location_on</span> 123 Whiskers Lane, Amsterdam, NL
+          </p>
+          <div class="flex items-center gap-2">
+            <div class="flex text-primary">
+              <span class="material-symbols-outlined filled text-[18px]">star</span>
+              <span class="material-symbols-outlined filled text-[18px]">star</span>
+              <span class="material-symbols-outlined filled text-[18px]">star</span>
+              <span class="material-symbols-outlined filled text-[18px]">star</span>
+              <span class="material-symbols-outlined filled text-[18px]">star</span>
+            </div>
+            <span class="font-bold text-text-main">4.9</span>
+            <span class="text-sm text-text-sec underline decoration-dotted cursor-pointer">(214 reviews)</span>
+            <span class="ml-2 text-xs font-bold text-green-700 bg-green-50 px-2.5 py-1 rounded-full">Open Now</span>
+          </div>
+        </div>
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <button class="flex items-center justify-center gap-2 h-11 px-6 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-sm transition-all shadow-orange active:scale-95">
+            <span class="material-symbols-outlined text-[18px]">calendar_month</span> Book Now
+          </button>
+          <button class="size-11 rounded-full border border-border-col bg-bg flex items-center justify-center text-text-main hover:bg-border-col transition-colors">
+            <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          </button>
+          <button class="size-11 rounded-full border border-border-col bg-bg flex items-center justify-center text-text-main hover:bg-border-col transition-colors">
+            <span class="material-symbols-outlined text-[20px]">share</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <!-- LEFT: Main content -->
+      <div class="lg:col-span-2 flex flex-col gap-8">
+
+        <!-- About -->
+        <section class="rounded-2xl bg-surface border border-border-col shadow-card p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined filled">pets</span>
+            </div>
+            <h2 class="text-xl font-bold">About Us</h2>
+          </div>
+          <p class="text-text-main/75 leading-relaxed mb-3">At Purrfect Paws Clinic, we believe every cat deserves royal treatment. Founded in 2015, we specialise exclusively in feline care — providing a calm, stress-free environment away from barking dogs. Our team of certified cat specialists is dedicated to ensuring your feline friend lives a long, healthy, happy life.</p>
+          <p class="text-text-main/75 leading-relaxed">We offer state-of-the-art diagnostics, dental care, and comfortable boarding suites when you're away. ISFM Gold Cat Friendly Clinic certified.</p>
+        </section>
+
+        <!-- Services -->
+        <section>
+          <h2 class="text-xl font-bold mb-4 px-1">Services &amp; Pricing</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-surface rounded-2xl border border-border-col shadow-card p-5 flex gap-4 items-start hover:shadow-hover hover:-translate-y-0.5 transition-all">
+              <div class="size-12 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center shrink-0"><span class="material-symbols-outlined filled">medical_services</span></div>
+              <div class="flex-1"><div class="flex justify-between mb-1"><h3 class="font-bold">Wellness Exam</h3><span class="font-bold text-primary">€65</span></div><p class="text-sm text-text-sec">Full physical checkup tailored for cats of all ages.</p></div>
+            </div>
+            <div class="bg-surface rounded-2xl border border-border-col shadow-card p-5 flex gap-4 items-start hover:shadow-hover hover:-translate-y-0.5 transition-all">
+              <div class="size-12 rounded-xl bg-green-50 text-green-500 flex items-center justify-center shrink-0"><span class="material-symbols-outlined filled">dentistry</span></div>
+              <div class="flex-1"><div class="flex justify-between mb-1"><h3 class="font-bold">Dental Cleaning</h3><span class="font-bold text-primary">€250+</span></div><p class="text-sm text-text-sec">Professional cleaning, polishing, and oral health assessment.</p></div>
+            </div>
+            <div class="bg-surface rounded-2xl border border-border-col shadow-card p-5 flex gap-4 items-start hover:shadow-hover hover:-translate-y-0.5 transition-all">
+              <div class="size-12 rounded-xl bg-purple-50 text-purple-500 flex items-center justify-center shrink-0"><span class="material-symbols-outlined filled">vaccines</span></div>
+              <div class="flex-1"><div class="flex justify-between mb-1"><h3 class="font-bold">Vaccinations</h3><span class="font-bold text-primary">€30</span></div><p class="text-sm text-text-sec">Core vaccines: FVRCP and Rabies to keep them safe.</p></div>
+            </div>
+            <div class="bg-surface rounded-2xl border border-border-col shadow-card p-5 flex gap-4 items-start hover:shadow-hover hover:-translate-y-0.5 transition-all">
+              <div class="size-12 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center shrink-0"><span class="material-symbols-outlined filled">content_cut</span></div>
+              <div class="flex-1"><div class="flex justify-between mb-1"><h3 class="font-bold">Lion Cut</h3><span class="font-bold text-primary">€85</span></div><p class="text-sm text-text-sec">Full body groom and style for long-haired breeds.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery -->
+        <section>
+          <div class="flex justify-between items-center mb-4 px-1">
+            <h2 class="text-xl font-bold">Gallery</h2>
+            <a href="#" class="text-primary text-sm font-bold hover:underline">View All</a>
+          </div>
+          <div class="grid grid-cols-4 gap-3 h-72">
+            <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden relative group cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&auto=format&fit=crop&q=80');"></div>
+            </div>
+            <div class="col-span-1 rounded-2xl overflow-hidden relative group cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=300&auto=format&fit=crop&q=80');"></div>
+            </div>
+            <div class="col-span-1 rounded-2xl overflow-hidden relative group cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=300&auto=format&fit=crop&q=80');"></div>
+            </div>
+            <div class="col-span-2 rounded-2xl overflow-hidden relative group cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?w=600&auto=format&fit=crop&q=80');"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="rounded-2xl bg-surface border border-border-col shadow-card p-6 md:p-8">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold">Reviews &amp; Ratings</h2>
+            <button class="h-10 px-5 rounded-full bg-border-col hover:bg-gray-200 text-sm font-bold transition-colors">Write a Review</button>
+          </div>
+          <!-- Summary -->
+          <div class="flex flex-wrap gap-8 mb-8 pb-8 border-b border-border-col">
+            <div>
+              <p class="text-5xl font-black tracking-tight mb-1">4.9</p>
+              <div class="flex text-primary mb-1">
+                <span class="material-symbols-outlined filled text-[18px]">star</span>
+                <span class="material-symbols-outlined filled text-[18px]">star</span>
+                <span class="material-symbols-outlined filled text-[18px]">star</span>
+                <span class="material-symbols-outlined filled text-[18px]">star</span>
+                <span class="material-symbols-outlined filled text-[18px]">star</span>
+              </div>
+              <p class="text-sm text-text-sec">214 reviews</p>
+            </div>
+            <div class="flex-1 min-w-[200px] flex flex-col gap-2">
+              <div class="flex items-center gap-3 text-sm"><span class="w-3 text-text-sec">5</span><div class="flex-1 h-2 bg-border-col rounded-full overflow-hidden"><div class="h-full bg-primary w-[88%] rounded-full"></div></div><span class="text-xs text-text-sec w-8 text-right">88%</span></div>
+              <div class="flex items-center gap-3 text-sm"><span class="w-3 text-text-sec">4</span><div class="flex-1 h-2 bg-border-col rounded-full overflow-hidden"><div class="h-full bg-primary w-[8%] rounded-full"></div></div><span class="text-xs text-text-sec w-8 text-right">8%</span></div>
+              <div class="flex items-center gap-3 text-sm"><span class="w-3 text-text-sec">3</span><div class="flex-1 h-2 bg-border-col rounded-full overflow-hidden"><div class="h-full bg-primary w-[3%] rounded-full"></div></div><span class="text-xs text-text-sec w-8 text-right">3%</span></div>
+              <div class="flex items-center gap-3 text-sm"><span class="w-3 text-text-sec">2</span><div class="flex-1 h-2 bg-border-col rounded-full overflow-hidden"><div class="h-full bg-primary w-[1%] rounded-full"></div></div><span class="text-xs text-text-sec w-8 text-right">1%</span></div>
+            </div>
+          </div>
+          <!-- Individual reviews -->
+          <div class="flex flex-col gap-6">
+            <div class="flex gap-4">
+              <div class="size-10 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold shrink-0">S</div>
+              <div class="flex-1">
+                <div class="flex items-start justify-between"><div><p class="font-bold text-sm">Sarah Jenkins</p><div class="flex text-primary mt-0.5"><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined filled text-[14px]">star</span></div></div><span class="text-xs text-text-sec">2 days ago</span></div>
+                <p class="text-sm text-text-main/75 mt-2 leading-relaxed">Absolutely incredible service. Dr. Annika was so gentle with my nervous tabby. The clinic smells of lavender — nothing like a typical vet. Highly recommend!</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="size-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold shrink-0">M</div>
+              <div class="flex-1">
+                <div class="flex items-start justify-between"><div><p class="font-bold text-sm">Marco Felini</p><div class="flex text-primary mt-0.5"><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined filled text-[14px]">star</span><span class="material-symbols-outlined text-[14px]">star</span></div></div><span class="text-xs text-text-sec">1 week ago</span></div>
+                <p class="text-sm text-text-main/75 mt-2 leading-relaxed">Pricing is on the higher end but you absolutely get what you pay for. Facilities are spotless and modern. My Maine Coon finally stopped hissing at the vet!</p>
+              </div>
+            </div>
+          </div>
+          <button class="w-full mt-6 py-3 text-primary text-sm font-bold hover:bg-primary/5 rounded-xl transition-colors">Read All 214 Reviews</button>
+        </section>
+
+      </div>
+
+      <!-- RIGHT: Sidebar -->
+      <div class="flex flex-col gap-6">
+        <div class="sticky top-24 flex flex-col gap-6">
+
+          <!-- Contact -->
+          <div class="rounded-2xl bg-surface border border-border-col shadow-card p-6">
+            <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+            <!-- Map placeholder -->
+            <div class="w-full aspect-video rounded-xl overflow-hidden bg-border-col mb-4 relative cursor-pointer group">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&auto=format&fit=crop&q=80');"></div>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                <div class="bg-white px-3 py-1.5 rounded-full shadow-soft flex items-center gap-1.5 group-hover:scale-105 transition-transform">
+                  <span class="material-symbols-outlined filled text-primary text-[16px]">directions</span>
+                  <span class="text-xs font-bold">Get Directions</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="flex gap-3 items-start"><span class="material-symbols-outlined text-text-sec text-[20px] mt-0.5">location_on</span><p class="text-sm">123 Whiskers Lane<br/>Jordaan District<br/>Amsterdam 1016</p></div>
+              <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-text-sec text-[20px]">call</span><a href="tel:+31201234567" class="text-sm font-medium hover:text-primary transition-colors">+31 20 123 4567</a></div>
+              <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-text-sec text-[20px]">language</span><a href="#" class="text-sm text-primary font-medium hover:underline truncate">www.purrfectpaws.nl</a></div>
+              <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-text-sec text-[20px]">mail</span><a href="#" class="text-sm font-medium hover:text-primary">hello@purrfectpaws.nl</a></div>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="rounded-2xl bg-surface border border-border-col shadow-card p-6">
+            <div class="flex items-center gap-2 mb-4">
+              <h3 class="text-lg font-bold">Opening Hours</h3>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 uppercase tracking-wide">Open Now</span>
+            </div>
+            <ul class="flex flex-col gap-2.5 text-sm">
+              <li class="flex justify-between font-semibold text-text-main"><span>Monday</span><span>9:00 – 18:00</span></li>
+              <li class="flex justify-between text-text-main/75"><span>Tuesday</span><span>9:00 – 18:00</span></li>
+              <li class="flex justify-between text-text-main/75"><span>Wednesday</span><span>9:00 – 18:00</span></li>
+              <li class="flex justify-between text-text-main/75"><span>Thursday</span><span>9:00 – 18:00</span></li>
+              <li class="flex justify-between text-text-main/75"><span>Friday</span><span>9:00 – 17:00</span></li>
+              <li class="flex justify-between text-text-sec"><span>Saturday</span><span>10:00 – 14:00</span></li>
+              <li class="flex justify-between text-text-sec"><span>Sunday</span><span>Closed</span></li>
+            </ul>
+          </div>
+
+          <!-- Specialties -->
+          <div class="rounded-2xl bg-surface border border-border-col shadow-card p-6">
+            <h3 class="text-lg font-bold mb-4">Specialties</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-full bg-border-col text-xs font-semibold hover:border hover:border-primary/50 cursor-default transition-colors">Cat Friendly Certified</span>
+              <span class="px-3 py-1.5 rounded-full bg-border-col text-xs font-semibold">Emergency Care</span>
+              <span class="px-3 py-1.5 rounded-full bg-border-col text-xs font-semibold">Surgery</span>
+              <span class="px-3 py-1.5 rounded-full bg-border-col text-xs font-semibold">Boarding</span>
+              <span class="px-3 py-1.5 rounded-full bg-border-col text-xs font-semibold">Senior Care</span>
+              <span class="px-3 py-1.5 rounded-full bg-border-col text-xs font-semibold">Dentistry</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="w-full bg-dark-bg text-white pt-14 pb-8 px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-[1280px]">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+      <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+        <a href="Homepage.html" class="flex items-center gap-3"><div class="size-7 text-primary"><svg fill="currentColor" viewBox="0 0 48 48"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"/></svg></div><span class="font-bold tracking-tight">Cats<span class="text-primary">.directory</span></span></a>
+        <p class="text-sm text-white/40">Europe's largest cat community.</p>
+      </div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Company</h4><a href="#" class="text-sm text-white/40 hover:text-white">About Us</a><a href="#" class="text-sm text-white/40 hover:text-white">Careers</a><a href="#" class="text-sm text-white/40 hover:text-white">Contact</a></div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Resources</h4><a href="Blog.html" class="text-sm text-white/40 hover:text-white">Blog</a><a href="#" class="text-sm text-white/40 hover:text-white">Breed Guide</a><a href="#" class="text-sm text-white/40 hover:text-white">Community</a></div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Legal</h4><a href="#" class="text-sm text-white/40 hover:text-white">Privacy</a><a href="#" class="text-sm text-white/40 hover:text-white">Terms</a><a href="#" class="text-sm text-white/40 hover:text-white">Cookies</a></div>
+    </div>
+    <div class="border-t border-white/8 pt-6 flex items-center justify-between text-xs text-white/30">
+      <p>© 2026 Cats.directory. All rights reserved.</p>
+      <p>Made with <span class="text-primary">♥</span> for cat lovers across Europe</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

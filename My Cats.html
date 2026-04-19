@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Cats — Cats.directory</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { primary:"#e77e23","primary-hover":"#d16b14","primary-light":"#fdf3eb","bg":"#fcfaf8","surface":"#ffffff","text-main":"#1b140e","text-sec":"#97704e","border-col":"#f3ede7","dark-bg":"#1b140e" },
+    fontFamily: { display:["Be Vietnam Pro","sans-serif"], sans:["Be Vietnam Pro","sans-serif"] },
+    borderRadius: { DEFAULT:"1rem", sm:"0.5rem", md:"0.75rem", lg:"1.5rem", xl:"2rem", "2xl":"3rem", full:"9999px" },
+    boxShadow: { card:"0 2px 12px -2px rgba(27,20,14,0.06),0 1px 4px -1px rgba(27,20,14,0.04)", soft:"0 8px 32px -4px rgba(27,20,14,0.10),0 2px 8px -2px rgba(27,20,14,0.06)", hover:"0 20px 48px -8px rgba(27,20,14,0.16),0 6px 16px -4px rgba(27,20,14,0.08)", orange:"0 8px 24px -4px rgba(231,126,35,0.40)" }
+  }}
+};
+</script>
+<style>
+  body { font-family:"Be Vietnam Pro",sans-serif; background:#fcfaf8; color:#1b140e; }
+  .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .filled { font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .img-zoom { transition:transform 0.5s cubic-bezier(.25,.46,.45,.94); }
+  .group:hover .img-zoom { transform:scale(1.06); }
+  .no-scrollbar::-webkit-scrollbar { display:none; }
+  .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 w-full border-b border-border-col bg-bg/85 backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between gap-6 px-6 lg:px-8">
+    <a href="Homepage.html" class="flex items-center gap-3 shrink-0 group">
+      <div class="size-8 text-primary transition-transform duration-200 group-hover:scale-110">
+        <svg fill="currentColor" viewBox="0 0 48 48"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"/></svg>
+      </div>
+      <span class="text-xl font-bold tracking-tight text-text-main">Cats<span class="text-primary">.directory</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 flex-1 justify-center">
+      <a href="Homepage.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Home</a>
+      <a href="Homepage.html#explore" class="px-4 py-2 rounded-full text-sm font-semibold text-primary bg-primary-light">Explore</a>
+      <a href="Business Profile.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Directory</a>
+      <a href="Blog.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <!-- Notification bell -->
+      <button class="hidden sm:flex size-10 items-center justify-center rounded-full border border-border-col text-text-sec hover:bg-border-col transition-colors relative">
+        <span class="material-symbols-outlined text-[20px]">notifications</span>
+        <span class="absolute top-2 right-2 size-2 rounded-full bg-primary"></span>
+      </button>
+      <!-- Avatar -->
+      <a href="Owner Profile.html" class="size-10 rounded-full bg-cover bg-center ring-2 ring-border-col hover:ring-primary transition-all" style="background-image:url('https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&auto=format&fit=crop&q=80');"></a>
+    </div>
+  </div>
+</header>
+
+<main class="flex-1 mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8 py-10 pb-24">
+
+  <!-- PAGE HEADING -->
+  <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-10">
+    <div>
+      <div class="flex items-center gap-2 text-sm text-text-sec mb-1">
+        <a href="Homepage.html" class="hover:text-primary transition-colors">Home</a>
+        <span class="material-symbols-outlined text-[15px]">chevron_right</span>
+        <a href="Owner Profile.html" class="hover:text-primary transition-colors">Sarah Jenkins</a>
+        <span class="material-symbols-outlined text-[15px]">chevron_right</span>
+        <span class="font-semibold text-text-main">My Cats</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-black tracking-tight">My Clowder</h1>
+      <p class="text-text-sec mt-1">You have <strong class="text-text-main">6</strong> cats registered</p>
+    </div>
+    <button onclick="document.getElementById('add-modal').classList.remove('hidden')" class="flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-primary text-white text-sm font-bold shadow-orange hover:bg-primary-hover transition-all active:scale-95 shrink-0">
+      <span class="material-symbols-outlined text-[20px]">add</span> Register New Cat
+    </button>
+  </div>
+
+  <!-- STATS ROW -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+    <div class="rounded-2xl bg-surface border border-border-col shadow-card p-4 flex items-center gap-3">
+      <div class="size-10 rounded-xl bg-green-50 text-green-600 flex items-center justify-center"><span class="material-symbols-outlined filled text-[20px]">check_circle</span></div>
+      <div><p class="text-xl font-bold">2</p><p class="text-xs text-text-sec">Available</p></div>
+    </div>
+    <div class="rounded-2xl bg-surface border border-border-col shadow-card p-4 flex items-center gap-3">
+      <div class="size-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center"><span class="material-symbols-outlined filled text-[20px]">sell</span></div>
+      <div><p class="text-xl font-bold">2</p><p class="text-xs text-text-sec">For Sale</p></div>
+    </div>
+    <div class="rounded-2xl bg-surface border border-border-col shadow-card p-4 flex items-center gap-3">
+      <div class="size-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center"><span class="material-symbols-outlined filled text-[20px]">volunteer_activism</span></div>
+      <div><p class="text-xl font-bold">1</p><p class="text-xs text-text-sec">Adoption</p></div>
+    </div>
+    <div class="rounded-2xl bg-surface border border-border-col shadow-card p-4 flex items-center gap-3">
+      <div class="size-10 rounded-xl bg-border-col text-text-sec flex items-center justify-center"><span class="material-symbols-outlined filled text-[20px]">lock</span></div>
+      <div><p class="text-xl font-bold">1</p><p class="text-xs text-text-sec">Private</p></div>
+    </div>
+  </div>
+
+  <!-- TOOLBAR -->
+  <div class="flex flex-col sm:flex-row gap-3 mb-8">
+    <div class="flex-1 max-w-sm relative flex items-center h-11 rounded-full bg-surface border border-border-col focus-within:ring-2 focus-within:ring-primary/25 focus-within:border-primary/50 px-4 gap-2 transition-all">
+      <span class="material-symbols-outlined text-text-sec text-[20px]">search</span>
+      <input type="text" placeholder="Search by name…" class="flex-1 bg-transparent border-none text-sm text-text-main placeholder-text-sec focus:ring-0 focus:outline-none"/>
+    </div>
+    <div class="flex gap-2 no-scrollbar overflow-x-auto">
+      <button class="shrink-0 h-11 px-4 rounded-full bg-primary text-white text-sm font-semibold">All</button>
+      <button class="shrink-0 h-11 px-4 rounded-full bg-surface border border-border-col text-sm font-semibold hover:border-primary/50 hover:text-primary transition-colors flex items-center gap-1.5">Breed <span class="material-symbols-outlined text-[18px]">expand_more</span></button>
+      <button class="shrink-0 h-11 px-4 rounded-full bg-surface border border-border-col text-sm font-semibold hover:border-primary/50 hover:text-primary transition-colors flex items-center gap-1.5">Age <span class="material-symbols-outlined text-[18px]">expand_more</span></button>
+      <button class="shrink-0 h-11 px-4 rounded-full bg-surface border border-border-col text-sm font-semibold hover:border-primary/50 hover:text-primary transition-colors flex items-center gap-1.5">Status <span class="material-symbols-outlined text-[18px]">expand_more</span></button>
+    </div>
+  </div>
+
+  <!-- CATS GRID -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Cat card macro -->
+    <!-- CARD 1 -->
+    <div class="group bg-surface rounded-2xl border border-border-col shadow-card hover:shadow-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=600&auto=format&fit=crop&q=80');"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 text-[11px] font-bold text-green-700 shadow-sm">
+          <span class="size-2 rounded-full bg-green-500"></span> Available
+        </div>
+        <!-- Card actions overlay -->
+        <div class="absolute top-3 right-3 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+          <a href="Cat Profile.html" class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm" title="View Profile"><span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm" title="Edit"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-red-500 transition-colors shadow-sm" title="Delete"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <div class="flex items-start justify-between mb-1">
+          <a href="Cat Profile.html" class="text-lg font-bold hover:text-primary transition-colors">Luna</a>
+          <div class="flex text-primary"><span class="material-symbols-outlined filled text-[14px]">star</span><span class="text-xs font-bold ml-0.5">4.9</span></div>
+        </div>
+        <p class="text-sm text-text-sec mb-3">British Shorthair · 3 Years · Female</p>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Microchipped</span>
+          <span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Vaccinated</span>
+          <span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Neutered</span>
+        </div>
+        <div class="flex gap-2 mt-auto">
+          <a href="Cat Profile.html" class="flex-1 h-9 rounded-full border border-border-col text-sm font-semibold text-text-main hover:bg-border-col transition-colors flex items-center justify-center">View Profile</a>
+          <button class="flex-1 h-9 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">edit</span> Edit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="group bg-surface rounded-2xl border border-border-col shadow-card hover:shadow-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=600&auto=format&fit=crop&q=80');"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 text-[11px] font-bold text-text-sec shadow-sm"><span class="size-2 rounded-full bg-gray-400"></span> Private</div>
+        <div class="absolute top-3 right-3 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+          <a href="Cat Profile.html" class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm" title="View"><span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm" title="Edit"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-red-500 transition-colors shadow-sm" title="Delete"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <div class="flex items-start justify-between mb-1"><a href="Cat Profile.html" class="text-lg font-bold hover:text-primary transition-colors">Oliver</a><div class="flex text-primary"><span class="material-symbols-outlined filled text-[14px]">star</span><span class="text-xs font-bold ml-0.5">4.7</span></div></div>
+        <p class="text-sm text-text-sec mb-3">Tabby · 2 Years · Male</p>
+        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Microchipped</span><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Vaccinated</span></div>
+        <div class="flex gap-2 mt-auto">
+          <a href="Cat Profile.html" class="flex-1 h-9 rounded-full border border-border-col text-sm font-semibold text-text-main hover:bg-border-col transition-colors flex items-center justify-center">View Profile</a>
+          <button class="flex-1 h-9 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">edit</span> Edit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="group bg-surface rounded-2xl border border-border-col shadow-card hover:shadow-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&auto=format&fit=crop&q=80');"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 text-[11px] font-bold text-amber-700 shadow-sm"><span class="size-2 rounded-full bg-amber-400"></span> For Sale</div>
+        <div class="absolute top-3 right-3 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+          <a href="Cat Profile.html" class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-red-500 transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <div class="flex items-start justify-between mb-1"><a href="Cat Profile.html" class="text-lg font-bold hover:text-primary transition-colors">Milo</a><div class="flex text-primary"><span class="material-symbols-outlined filled text-[14px]">star</span><span class="text-xs font-bold ml-0.5">5.0</span></div></div>
+        <p class="text-sm text-text-sec mb-3">Maine Coon · 4 Years · Male</p>
+        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Microchipped</span><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Vaccinated</span><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Pedigree</span></div>
+        <div class="flex gap-2 mt-auto">
+          <a href="Cat Profile.html" class="flex-1 h-9 rounded-full border border-border-col text-sm font-semibold text-text-main hover:bg-border-col transition-colors flex items-center justify-center">View Profile</a>
+          <button class="flex-1 h-9 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">edit</span> Edit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="group bg-surface rounded-2xl border border-border-col shadow-card hover:shadow-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=600&auto=format&fit=crop&q=80');"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 text-[11px] font-bold text-green-700 shadow-sm"><span class="size-2 rounded-full bg-green-500"></span> Available</div>
+        <div class="absolute top-3 right-3 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+          <a href="Cat Profile.html" class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-red-500 transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <div class="flex items-start justify-between mb-1"><a href="Cat Profile.html" class="text-lg font-bold hover:text-primary transition-colors">Cleo</a><div class="flex text-primary"><span class="material-symbols-outlined filled text-[14px]">star</span><span class="text-xs font-bold ml-0.5">4.8</span></div></div>
+        <p class="text-sm text-text-sec mb-3">Ragdoll · 2 Years · Female</p>
+        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Microchipped</span><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Neutered</span></div>
+        <div class="flex gap-2 mt-auto">
+          <a href="Cat Profile.html" class="flex-1 h-9 rounded-full border border-border-col text-sm font-semibold text-text-main hover:bg-border-col transition-colors flex items-center justify-center">View Profile</a>
+          <button class="flex-1 h-9 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">edit</span> Edit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="group bg-surface rounded-2xl border border-border-col shadow-card hover:shadow-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1561948955-570b270e7c36?w=600&auto=format&fit=crop&q=80');"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 text-[11px] font-bold text-blue-700 shadow-sm"><span class="size-2 rounded-full bg-blue-400"></span> Adoption</div>
+        <div class="absolute top-3 right-3 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+          <a href="Cat Profile.html" class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-primary transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+          <button class="size-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-text-sec hover:text-red-500 transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <div class="flex items-start justify-between mb-1"><a href="Cat Profile.html" class="text-lg font-bold hover:text-primary transition-colors">Bella</a><div class="flex text-primary"><span class="material-symbols-outlined filled text-[14px]">star</span><span class="text-xs font-bold ml-0.5">4.6</span></div></div>
+        <p class="text-sm text-text-sec mb-3">Siamese · 1 Year · Female</p>
+        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Vaccinated</span><span class="px-2 py-0.5 rounded-full bg-border-col text-[11px] font-semibold">Indoor</span></div>
+        <div class="flex gap-2 mt-auto">
+          <a href="Cat Profile.html" class="flex-1 h-9 rounded-full border border-border-col text-sm font-semibold text-text-main hover:bg-border-col transition-colors flex items-center justify-center">View Profile</a>
+          <button class="flex-1 h-9 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">edit</span> Edit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD NEW CAT card -->
+    <button onclick="document.getElementById('add-modal').classList.remove('hidden')" class="rounded-2xl border-2 border-dashed border-border-col bg-surface hover:border-primary/50 hover:bg-primary-light transition-all duration-300 flex flex-col items-center justify-center gap-3 aspect-auto min-h-[280px] cursor-pointer group">
+      <div class="size-14 rounded-full bg-border-col group-hover:bg-primary group-hover:text-white text-text-sec flex items-center justify-center transition-all duration-300">
+        <span class="material-symbols-outlined text-[28px]">add</span>
+      </div>
+      <p class="font-bold text-text-sec group-hover:text-primary transition-colors">Register a New Cat</p>
+      <p class="text-xs text-text-sec/60 px-6 text-center">Add your cat to Europe's largest directory</p>
+    </button>
+
+  </div>
+
+</main>
+
+<!-- ADD CAT MODAL -->
+<div id="add-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+  <div class="bg-surface rounded-2xl shadow-hover w-full max-w-lg p-6 md:p-8">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl font-bold">Register a New Cat</h2>
+      <button onclick="document.getElementById('add-modal').classList.add('hidden')" class="size-9 rounded-full border border-border-col flex items-center justify-center text-text-sec hover:bg-border-col transition-colors">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+    <!-- Photo upload -->
+    <div class="w-full aspect-video rounded-2xl border-2 border-dashed border-border-col bg-bg flex flex-col items-center justify-center gap-2 mb-6 cursor-pointer hover:border-primary/50 hover:bg-primary-light transition-all group">
+      <span class="material-symbols-outlined text-[36px] text-text-sec group-hover:text-primary transition-colors">add_photo_alternate</span>
+      <p class="text-sm font-semibold text-text-sec group-hover:text-primary transition-colors">Upload a Photo</p>
+      <p class="text-xs text-text-sec/60">JPG, PNG or WebP · Max 10MB</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <div><label class="text-xs font-bold text-text-sec mb-1.5 block">Cat's Name</label><input type="text" placeholder="e.g. Whiskers" class="w-full h-11 rounded-xl border border-border-col bg-bg px-4 text-sm focus:ring-2 focus:ring-primary/25 focus:border-primary/50 focus:outline-none transition-all"/></div>
+      <div><label class="text-xs font-bold text-text-sec mb-1.5 block">Breed</label><input type="text" placeholder="e.g. Persian" class="w-full h-11 rounded-xl border border-border-col bg-bg px-4 text-sm focus:ring-2 focus:ring-primary/25 focus:border-primary/50 focus:outline-none transition-all"/></div>
+      <div><label class="text-xs font-bold text-text-sec mb-1.5 block">Age</label><input type="text" placeholder="e.g. 2 Years" class="w-full h-11 rounded-xl border border-border-col bg-bg px-4 text-sm focus:ring-2 focus:ring-primary/25 focus:border-primary/50 focus:outline-none transition-all"/></div>
+      <div><label class="text-xs font-bold text-text-sec mb-1.5 block">Status</label>
+        <select class="w-full h-11 rounded-xl border border-border-col bg-bg px-4 text-sm focus:ring-2 focus:ring-primary/25 focus:border-primary/50 focus:outline-none transition-all text-text-main">
+          <option>Available</option><option>For Sale</option><option>Adoption</option><option>Private</option>
+        </select>
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <button onclick="document.getElementById('add-modal').classList.add('hidden')" class="flex-1 h-11 rounded-full border border-border-col text-sm font-bold text-text-main hover:bg-border-col transition-colors">Cancel</button>
+      <button class="flex-1 h-11 rounded-full bg-primary text-white text-sm font-bold hover:bg-primary-hover shadow-orange transition-all active:scale-95">Register Cat</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="w-full bg-dark-bg text-white pt-14 pb-8 px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-[1280px]">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+      <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+        <a href="Homepage.html" class="flex items-center gap-3"><div class="size-7 text-primary"><svg fill="currentColor" viewBox="0 0 48 48"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"/></svg></div><span class="font-bold tracking-tight">Cats<span class="text-primary">.directory</span></span></a>
+        <p class="text-sm text-white/40">Europe's largest cat community.</p>
+      </div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Company</h4><a href="#" class="text-sm text-white/40 hover:text-white">About Us</a><a href="#" class="text-sm text-white/40 hover:text-white">Careers</a><a href="#" class="text-sm text-white/40 hover:text-white">Contact</a></div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Resources</h4><a href="Blog.html" class="text-sm text-white/40 hover:text-white">Blog</a><a href="#" class="text-sm text-white/40 hover:text-white">Breed Guide</a><a href="#" class="text-sm text-white/40 hover:text-white">Community</a></div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Legal</h4><a href="#" class="text-sm text-white/40 hover:text-white">Privacy</a><a href="#" class="text-sm text-white/40 hover:text-white">Terms</a><a href="#" class="text-sm text-white/40 hover:text-white">Cookies</a></div>
+    </div>
+    <div class="border-t border-white/8 pt-6 flex items-center justify-between text-xs text-white/30">
+      <p>© 2026 Cats.directory. All rights reserved.</p>
+      <p>Made with <span class="text-primary">♥</span> for cat lovers across Europe</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

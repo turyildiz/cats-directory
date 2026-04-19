@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cats.directory — Europe's Cat Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #e77e23;
+      --primary-dark: #c96a10;
+      --primary-light: #fef0e0;
+      --bg: #FFF8F0;
+      --surface: #ffffff;
+      --text: #1b140e;
+      --text-secondary: #97704e;
+      --border: #f3ede7;
+      --shadow-sm: 0 1px 3px rgba(27,20,14,0.06), 0 1px 2px rgba(27,20,14,0.04);
+      --shadow-md: 0 4px 12px rgba(27,20,14,0.08), 0 2px 6px rgba(27,20,14,0.05);
+      --shadow-lg: 0 12px 32px rgba(27,20,14,0.12), 0 4px 10px rgba(27,20,14,0.06);
+      --shadow-hover: 0 20px 48px rgba(27,20,14,0.16), 0 8px 16px rgba(27,20,14,0.08);
+      --r-sm: 8px;
+      --r-md: 12px;
+      --r-lg: 16px;
+      --r-xl: 24px;
+      --r-full: 9999px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,248,240,0.82);
+      backdrop-filter: blur(16px) saturate(1.4);
+      -webkit-backdrop-filter: blur(16px) saturate(1.4);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.2s;
+    }
+
+    header.scrolled { box-shadow: var(--shadow-md); }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--primary);
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon .material-symbols-outlined {
+      color: #fff;
+      font-size: 22px;
+      font-variation-settings: 'FILL' 1;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+
+    .logo-text span { color: var(--primary); }
+
+    nav { display: flex; gap: 4px; flex: 1; }
+
+    nav a {
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      border-radius: var(--r-full);
+      transition: color 0.15s, background 0.15s;
+    }
+
+    nav a:hover { color: var(--text); background: var(--border); }
+    nav a.active { color: var(--primary); background: var(--primary-light); }
+
+    .header-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--r-full);
+      padding: 9px 20px;
+      transition: all 0.18s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-ghost:hover { background: var(--border); border-color: #e8ddd4; }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(231,126,35,0.35); }
+
+    .btn-primary:active { transform: translateY(0); }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--text);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      height: 520px;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-image-wrap:hover img { transform: scale(1.03); }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(27,20,14,0) 20%,
+        rgba(27,20,14,0.08) 45%,
+        rgba(27,20,14,0.72) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 56px 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,248,240,0.18);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #fff;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: var(--r-full);
+      letter-spacing: 0.4px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge .material-symbols-outlined { font-size: 15px; font-variation-settings: 'FILL' 1; color: #ffc87a; }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 10px;
+      text-wrap: balance;
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.78);
+      font-size: clamp(15px, 1.8vw, 18px);
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: var(--r-full);
+      padding: 6px 6px 6px 20px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: var(--shadow-lg);
+      gap: 12px;
+    }
+
+    .search-bar .material-symbols-outlined {
+      color: var(--text-secondary);
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--text);
+      background: transparent;
+    }
+
+    .search-bar input::placeholder { color: #c4aa97; }
+
+    .search-bar .btn-primary { padding: 10px 24px; font-size: 14.5px; }
+
+    /* ── SECTION HEADER ── */
+    .section { padding: 72px 0; }
+
+    .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      gap: 16px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      line-height: 1.2;
+    }
+
+    .section-link {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      transition: gap 0.15s;
+    }
+
+    .section-link:hover { gap: 8px; }
+    .section-link .material-symbols-outlined { font-size: 18px; }
+
+    /* ── FEATURED CATS CAROUSEL ── */
+    .carousel-wrap { position: relative; }
+
+    .carousel {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;
+    }
+
+    .carousel::-webkit-scrollbar { display: none; }
+
+    .cat-card {
+      flex: 0 0 220px;
+      scroll-snap-align: start;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      position: relative;
+      height: 290px;
+      cursor: pointer;
+      transition: transform 0.22s, box-shadow 0.22s;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+    .cat-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .cat-card:hover img { transform: scale(1.05); }
+
+    .cat-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27,20,14,0.82) 0%, rgba(27,20,14,0) 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 18px;
+    }
+
+    .cat-card-name { font-size: 17px; font-weight: 700; color: #fff; }
+    .cat-card-meta { font-size: 13px; color: rgba(255,255,255,0.72); margin-top: 3px; }
+
+    .cat-card-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(255,248,240,0.18);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #fff;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--r-full);
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-full);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      z-index: 10;
+      transition: all 0.18s;
+      color: var(--text);
+    }
+
+    .scroll-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 4px 12px rgba(231,126,35,0.3); }
+    .scroll-btn.left { left: -18px; }
+    .scroll-btn.right { right: -18px; }
+    .scroll-btn .material-symbols-outlined { font-size: 22px; }
+
+    /* ── BUSINESS CARDS ── */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+    .biz-card {
+      background: var(--surface);
+      border-radius: var(--r-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.22s, box-shadow 0.22s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .biz-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+    .biz-card-img {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+    }
+
+    .biz-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .biz-card:hover .biz-card-img img { transform: scale(1.05); }
+
+    .biz-card-body { padding: 18px 20px 20px; }
+
+    .biz-card-name { font-size: 16.5px; font-weight: 700; margin-bottom: 6px; }
+
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .stars-icons { display: flex; gap: 1px; }
+
+    .stars-icons .material-symbols-outlined {
+      font-size: 16px;
+      color: #f5a623;
+      font-variation-settings: 'FILL' 1;
+    }
+
+    .stars-score { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+
+    .biz-card-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+
+    .biz-card-footer {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .biz-tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: var(--r-full);
+    }
+
+    .biz-arrow { color: var(--text-secondary); font-size: 18px; transition: transform 0.15s; }
+    .biz-card:hover .biz-arrow { transform: translateX(3px); color: var(--primary); }
+
+    /* ── ARTICLES ── */
+    .articles-section { background: var(--surface); }
+
+    .article-card {
+      background: var(--bg);
+      border-radius: var(--r-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.22s, box-shadow 0.22s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+    .article-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .article-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .article-card:hover .article-img img { transform: scale(1.05); }
+
+    .article-body { padding: 20px 22px 24px; }
+
+    .article-cat {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .article-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      letter-spacing: -0.2px;
+    }
+
+    .article-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+
+    .article-meta-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: var(--r-full);
+      background: var(--border);
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--primary);
+      padding: 48px 0;
+    }
+
+    .stats-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat-item { color: #fff; }
+
+    .stat-number {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label { font-size: 14px; color: rgba(255,255,255,0.72); font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--text); color: rgba(255,255,255,0.72); }
+
+    .footer-top {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 24px 48px;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+
+    .footer-brand .logo-text { color: #fff; }
+    .footer-brand .logo-icon { background: var(--primary); }
+
+    .footer-tagline {
+      font-size: 14px;
+      line-height: 1.65;
+      margin-top: 16px;
+      color: rgba(255,255,255,0.55);
+      max-width: 260px;
+    }
+
+    .footer-social { display: flex; gap: 10px; margin-top: 24px; }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--r-md);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.18s;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .social-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.4px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+    .footer-col ul a {
+      text-decoration: none;
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.15s;
+    }
+
+    .footer-col ul a:hover { color: #fff; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .scroll-btn.left { left: 4px; }
+      .scroll-btn.right { right: 4px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-image-wrap { height: 380px; }
+      .hero-overlay { padding: 32px 20px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); gap: 16px; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .header-actions .btn-ghost { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <span class="material-symbols-outlined">pets</span>
+      </div>
+      <span class="logo-text">Cats<span>.directory</span></span>
+    </a>
+
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#features">Features</a>
+      <a href="#articles">Blog</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="btn btn-ghost">Log in</a>
+      <a href="#" class="btn btn-primary">
+        <span class="material-symbols-outlined" style="font-size:16px">person_add</span>
+        Sign Up
+      </a>
+    </div>
+
+    <button class="hamburger" aria-label="Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero">
+  <div class="hero-image-wrap">
+    <img
+      src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=1400&auto=format&fit=crop&q=80"
+      alt="Beautiful cat"
+      loading="eager"
+    />
+    <div class="hero-overlay">
+      <div class="hero-badge">
+        <span class="material-symbols-outlined">auto_awesome</span>
+        Europe's #1 Cat Community
+      </div>
+      <h1>Find the Purr-fect Match</h1>
+      <p class="hero-sub">Discover cats for adoption, connect with breeders, and explore top cat businesses across Europe.</p>
+      <div class="search-bar">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search breeds, cities, shelters…" />
+        <button class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FEATURED CATS ═══════════════════ -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Browse Cats</div>
+        <h2 class="section-title">Featured Felines</h2>
+      </div>
+      <a href="#" class="section-link">View all cats <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+
+    <div class="carousel-wrap">
+      <button class="scroll-btn left" id="scroll-left" aria-label="Scroll left">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+
+      <div class="carousel" id="cat-carousel">
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36?w=400&auto=format&fit=crop&q=80" alt="Luna" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Luna</div>
+            <div class="cat-card-meta">British Shorthair · 2 yrs</div>
+          </div>
+          <div class="cat-card-badge">Available</div>
+        </div>
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400&auto=format&fit=crop&q=80" alt="Oliver" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Oliver</div>
+            <div class="cat-card-meta">Maine Coon · 3 yrs</div>
+          </div>
+          <div class="cat-card-badge">For Sale</div>
+        </div>
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=400&auto=format&fit=crop&q=80" alt="Bella" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Bella</div>
+            <div class="cat-card-meta">Ragdoll · 1 yr</div>
+          </div>
+          <div class="cat-card-badge">Available</div>
+        </div>
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&auto=format&fit=crop&q=80" alt="Milo" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Milo</div>
+            <div class="cat-card-meta">Siamese · 4 yrs</div>
+          </div>
+          <div class="cat-card-badge">Adoption</div>
+        </div>
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=400&auto=format&fit=crop&q=80" alt="Cleo" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Cleo</div>
+            <div class="cat-card-meta">Abyssinian · 2 yrs</div>
+          </div>
+          <div class="cat-card-badge">Available</div>
+        </div>
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400&auto=format&fit=crop&q=80" alt="Simba" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Simba</div>
+            <div class="cat-card-meta">Norwegian Forest · 5 yrs</div>
+          </div>
+          <div class="cat-card-badge">For Sale</div>
+        </div>
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400&auto=format&fit=crop&q=80" alt="Nala" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Nala</div>
+            <div class="cat-card-meta">Persian · 3 yrs</div>
+          </div>
+          <div class="cat-card-badge">Adoption</div>
+        </div>
+        <div class="cat-card">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&auto=format&fit=crop&q=80" alt="Felix" />
+          <div class="cat-card-overlay">
+            <div class="cat-card-name">Felix</div>
+            <div class="cat-card-meta">Sphynx · 2 yrs</div>
+          </div>
+          <div class="cat-card-badge">Available</div>
+        </div>
+      </div>
+
+      <button class="scroll-btn right" id="scroll-right" aria-label="Scroll right">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ STATS STRIP ═══════════════════ -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">48K+</div>
+      <div class="stat-label">Cats Listed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3,200</div>
+      <div class="stat-label">Verified Breeders</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">24</div>
+      <div class="stat-label">Countries</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">120K+</div>
+      <div class="stat-label">Community Members</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ TOP BUSINESSES ═══════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Trusted Partners</div>
+        <h2 class="section-title">Top Cat Businesses</h2>
+      </div>
+      <a href="#" class="section-link">All businesses <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+
+    <div class="grid-3">
+      <!-- Card 1 -->
+      <div class="biz-card">
+        <div class="biz-card-img">
+          <img src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?w=600&auto=format&fit=crop&q=80" alt="Purrfect Paws Clinic" />
+        </div>
+        <div class="biz-card-body">
+          <div class="biz-card-name">Purrfect Paws Clinic</div>
+          <div class="stars">
+            <div class="stars-icons">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+            </div>
+            <span class="stars-score">5.0 · 214 reviews</span>
+          </div>
+          <p class="biz-card-desc">Award-winning feline veterinary clinic in Amsterdam. Specialists in senior cat care and preventative medicine.</p>
+        </div>
+        <div class="biz-card-footer">
+          <span class="biz-tag">Veterinary</span>
+          <span class="material-symbols-outlined biz-arrow">arrow_forward</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="biz-card">
+        <div class="biz-card-img">
+          <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&auto=format&fit=crop&q=80" alt="Le Chat Royal" />
+        </div>
+        <div class="biz-card-body">
+          <div class="biz-card-name">Le Chat Royal Cattery</div>
+          <div class="stars">
+            <div class="stars-icons">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star_half</span>
+            </div>
+            <span class="stars-score">4.8 · 189 reviews</span>
+          </div>
+          <p class="biz-card-desc">Luxury cat boarding and grooming salon in Paris. Our guests enjoy private suites and daily wellness routines.</p>
+        </div>
+        <div class="biz-card-footer">
+          <span class="biz-tag">Grooming</span>
+          <span class="material-symbols-outlined biz-arrow">arrow_forward</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="biz-card">
+        <div class="biz-card-img">
+          <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=600&auto=format&fit=crop&q=80" alt="Nordic Whiskers" />
+        </div>
+        <div class="biz-card-body">
+          <div class="biz-card-name">Nordic Whiskers Breeder</div>
+          <div class="stars">
+            <div class="stars-icons">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star_half</span>
+            </div>
+            <span class="stars-score">4.7 · 143 reviews</span>
+          </div>
+          <p class="biz-card-desc">Certified Norwegian Forest Cat breeder in Stockholm. TICA registered with health-tested bloodlines since 2009.</p>
+        </div>
+        <div class="biz-card-footer">
+          <span class="biz-tag">Breeder</span>
+          <span class="material-symbols-outlined biz-arrow">arrow_forward</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ARTICLES ═══════════════════ -->
+<section class="section articles-section" id="articles">
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">From the Blog</div>
+        <h2 class="section-title">Latest Articles</h2>
+      </div>
+      <a href="#" class="section-link">All articles <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+
+    <div class="grid-3">
+      <div class="article-card">
+        <div class="article-img">
+          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80" alt="Article 1" />
+        </div>
+        <div class="article-body">
+          <div class="article-cat">Health &amp; Wellness</div>
+          <h3 class="article-title">10 Signs Your Cat Is Happier Than You Think</h3>
+          <p class="article-excerpt">From slow blinks to bread-loaf postures — learn the subtle body language cues cats use to show they're content.</p>
+          <div class="article-meta">
+            <span>Sarah Meow</span>
+            <span class="article-meta-dot"></span>
+            <span>Apr 14, 2026</span>
+            <span class="article-meta-dot"></span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-img">
+          <img src="https://images.unsplash.com/photo-1583795128727-6ec3642408f8?w=600&auto=format&fit=crop&q=80" alt="Article 2" />
+        </div>
+        <div class="article-body">
+          <div class="article-cat">Breed Guide</div>
+          <h3 class="article-title">Maine Coon vs Ragdoll: Which Gentle Giant Is Right for You?</h3>
+          <p class="article-excerpt">A deep dive into personality, grooming needs, and family compatibility for two of Europe's most popular large breeds.</p>
+          <div class="article-meta">
+            <span>Tom Whiskers</span>
+            <span class="article-meta-dot"></span>
+            <span>Apr 10, 2026</span>
+            <span class="article-meta-dot"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-img">
+          <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600&auto=format&fit=crop&q=80" alt="Article 3" />
+        </div>
+        <div class="article-body">
+          <div class="article-cat">Adoption</div>
+          <h3 class="article-title">First 30 Days With a Rescue Cat: A Survival Guide</h3>
+          <p class="article-excerpt">Everything from setting up a safe room to building trust on your new cat's timeline — tips from experienced fosters.</p>
+          <div class="article-meta">
+            <span>Lena Catzmann</span>
+            <span class="article-meta-dot"></span>
+            <span>Apr 6, 2026</span>
+            <span class="article-meta-dot"></span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <span class="material-symbols-outlined">pets</span>
+        </div>
+        <span class="logo-text">Cats<span style="color:var(--primary)">.directory</span></span>
+      </a>
+      <p class="footer-tagline">Europe's largest cat community — connecting cat lovers with breeders, shelters, and businesses since 2021.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn" aria-label="Instagram">𝕀</a>
+        <a href="#" class="social-btn" aria-label="X">𝕏</a>
+        <a href="#" class="social-btn" aria-label="Facebook">𝔽</a>
+        <a href="#" class="social-btn" aria-label="TikTok">𝕋</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Breed Encyclopedia</a></li>
+        <li><a href="#">Cat Care Guides</a></li>
+        <li><a href="#">Community Forum</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookie Settings</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Cats.directory. All rights reserved.</span>
+    <span>Made with <span style="color:var(--primary)">♥</span> for cat lovers across Europe</span>
+  </div>
+</footer>
+
+<script>
+  // Sticky header shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // Carousel scroll
+  const carousel = document.getElementById('cat-carousel');
+  const scrollAmt = 258;
+
+  document.getElementById('scroll-left').addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmt, behavior: 'smooth' });
+  });
+
+  document.getElementById('scroll-right').addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmt, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luna — Cats.directory</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { primary:"#e77e23","primary-hover":"#d16b14","primary-light":"#fdf3eb","bg":"#fcfaf8","surface":"#ffffff","text-main":"#1b140e","text-sec":"#97704e","border-col":"#f3ede7","dark-bg":"#1b140e" },
+    fontFamily: { display:["Be Vietnam Pro","sans-serif"], sans:["Be Vietnam Pro","sans-serif"] },
+    borderRadius: { DEFAULT:"1rem", sm:"0.5rem", md:"0.75rem", lg:"1.5rem", xl:"2rem", "2xl":"3rem", full:"9999px" },
+    boxShadow: { card:"0 2px 12px -2px rgba(27,20,14,0.06),0 1px 4px -1px rgba(27,20,14,0.04)", soft:"0 8px 32px -4px rgba(27,20,14,0.10),0 2px 8px -2px rgba(27,20,14,0.06)", hover:"0 20px 48px -8px rgba(27,20,14,0.16),0 6px 16px -4px rgba(27,20,14,0.08)", orange:"0 8px 24px -4px rgba(231,126,35,0.40)" }
+  }}
+};
+</script>
+<style>
+  body { font-family:"Be Vietnam Pro",sans-serif; background:#fcfaf8; color:#1b140e; }
+  .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .filled { font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .img-zoom { transition:transform 0.6s cubic-bezier(.25,.46,.45,.94); }
+  .group:hover .img-zoom { transform:scale(1.06); }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 w-full border-b border-border-col bg-bg/85 backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between gap-6 px-6 lg:px-8">
+    <a href="Homepage.html" class="flex items-center gap-3 shrink-0 group">
+      <div class="size-8 text-primary transition-transform duration-200 group-hover:scale-110">
+        <svg fill="currentColor" viewBox="0 0 48 48"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"/></svg>
+      </div>
+      <span class="text-xl font-bold tracking-tight text-text-main">Cats<span class="text-primary">.directory</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 flex-1 justify-center">
+      <a href="Homepage.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Home</a>
+      <a href="Homepage.html#explore" class="px-4 py-2 rounded-full text-sm font-semibold text-primary bg-primary-light">Explore</a>
+      <a href="Business Profile.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Directory</a>
+      <a href="Blog.html" class="px-4 py-2 rounded-full text-sm font-semibold text-text-main hover:bg-border-col transition-colors">Blog</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="hidden lg:flex items-center gap-2 h-10 rounded-full bg-border-col px-4 w-52 focus-within:ring-2 focus-within:ring-primary/25 focus-within:bg-white">
+        <span class="material-symbols-outlined text-text-sec text-[20px]">search</span>
+        <input type="text" placeholder="Find cats, breeds…" class="bg-transparent border-none text-sm text-text-main placeholder-text-sec focus:ring-0 focus:outline-none w-full"/>
+      </div>
+      <a href="#" class="hidden sm:flex h-10 items-center px-5 rounded-full border border-border-col text-sm font-bold text-text-main hover:bg-border-col transition-colors">Log In</a>
+      <a href="#" class="flex h-10 items-center px-5 rounded-full bg-primary text-white text-sm font-bold shadow-orange hover:bg-primary-hover transition-all active:scale-95">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<main class="pb-24">
+
+  <!-- COVER BANNER -->
+  <div class="w-full h-52 md:h-72 overflow-hidden relative group">
+    <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+    <!-- Breadcrumb -->
+    <div class="absolute top-5 left-6 flex items-center gap-2 text-white/80 text-sm font-medium">
+      <a href="Homepage.html" class="hover:text-white transition-colors">Home</a>
+      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      <a href="Homepage.html#explore" class="hover:text-white transition-colors">Explore</a>
+      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      <span class="text-white font-bold">Luna</span>
+    </div>
+  </div>
+
+  <!-- PROFILE LAYOUT -->
+  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-4">
+
+      <!-- SIDEBAR -->
+      <aside class="lg:col-span-4 xl:col-span-3 flex flex-col gap-5">
+        <div class="sticky top-24 flex flex-col gap-5">
+
+          <!-- Identity card -->
+          <div class="relative flex flex-col items-center rounded-2xl bg-surface border border-border-col shadow-card p-6 pt-0 text-center">
+            <!-- Avatar floated up -->
+            <div class="-mt-16 mb-4 relative">
+              <div class="size-32 rounded-full border-[5px] border-surface bg-cover bg-center shadow-soft" style="background-image:url('https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=400&auto=format&fit=crop&q=80');"></div>
+              <div class="absolute bottom-1 right-1 size-8 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-sm border-2 border-surface">
+                <span class="material-symbols-outlined filled text-[16px]">verified</span>
+              </div>
+            </div>
+            <h1 class="text-2xl font-extrabold tracking-tight">Luna</h1>
+            <p class="mt-1 text-sm font-medium text-text-sec flex items-center justify-center gap-1">
+              <span class="material-symbols-outlined text-[15px]">location_on</span> London, UK
+            </p>
+            <div class="mt-3 flex flex-wrap justify-center gap-2">
+              <span class="inline-flex items-center rounded-full bg-primary-light px-3 py-1 text-xs font-bold text-primary">British Shorthair</span>
+              <span class="inline-flex items-center rounded-full bg-border-col px-3 py-1 text-xs font-bold text-text-sec">3 Years Old</span>
+              <span class="inline-flex items-center rounded-full bg-green-50 px-3 py-1 text-xs font-bold text-green-700">Available</span>
+            </div>
+            <!-- Action buttons -->
+            <div class="mt-5 flex w-full gap-2">
+              <button class="flex flex-1 items-center justify-center gap-1.5 rounded-full bg-primary py-2.5 text-sm font-bold text-white shadow-orange hover:bg-primary-hover transition-all active:scale-95">
+                <span class="material-symbols-outlined filled text-[17px]">favorite</span> Follow
+              </button>
+              <button class="flex items-center justify-center rounded-full bg-border-col size-10 text-text-main hover:bg-gray-200 transition-colors" title="Message">
+                <span class="material-symbols-outlined text-[20px]">mail</span>
+              </button>
+              <button class="flex items-center justify-center rounded-full bg-border-col size-10 text-text-main hover:bg-gray-200 transition-colors" title="Share">
+                <span class="material-symbols-outlined text-[20px]">ios_share</span>
+              </button>
+            </div>
+            <button class="mt-2.5 flex w-full items-center justify-center gap-2 rounded-full border border-primary/30 bg-white py-2.5 text-sm font-bold text-primary hover:bg-primary-light transition-colors">
+              <span class="material-symbols-outlined filled text-[17px]">set_meal</span> Send a Treat
+            </button>
+          </div>
+
+          <!-- Owner card -->
+          <div class="flex items-center gap-4 rounded-2xl bg-surface border border-border-col shadow-card p-4">
+            <div class="size-12 rounded-full bg-cover bg-center border-2 border-border-col" style="background-image:url('https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&auto=format&fit=crop&q=80');"></div>
+            <div class="flex-1">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-text-sec">Managed by</p>
+              <a href="Owner Profile.html" class="text-sm font-bold text-text-main hover:text-primary transition-colors">Sarah Jenkins</a>
+            </div>
+            <a href="Owner Profile.html" class="text-xs font-bold text-primary hover:underline">View</a>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-px rounded-2xl overflow-hidden border border-border-col shadow-card bg-border-col">
+            <div class="flex flex-col items-center gap-0.5 py-4 bg-surface">
+              <span class="text-xl font-bold">1.2k</span>
+              <span class="text-xs text-text-sec">Followers</span>
+            </div>
+            <div class="flex flex-col items-center gap-0.5 py-4 bg-surface">
+              <span class="text-xl font-bold">450</span>
+              <span class="text-xs text-text-sec">Friends</span>
+            </div>
+            <div class="flex flex-col items-center gap-0.5 py-4 bg-surface">
+              <span class="text-xl font-bold">892</span>
+              <span class="text-xs text-text-sec">Treats</span>
+            </div>
+          </div>
+
+          <!-- Furiends -->
+          <div class="rounded-2xl bg-surface border border-border-col shadow-card p-5">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-sm font-bold">Furiends</h3>
+              <a href="#" class="text-xs font-bold text-primary hover:underline">See All</a>
+            </div>
+            <div class="grid grid-cols-4 gap-3">
+              <div class="group/f flex flex-col items-center gap-1 cursor-pointer">
+                <div class="size-12 rounded-full bg-cover bg-center ring-2 ring-white ring-offset-2 ring-offset-primary-light transition-transform group-hover/f:scale-110" style="background-image:url('https://images.unsplash.com/photo-1574158622682-e40e69881006?w=100&auto=format&fit=crop&q=80');"></div>
+                <span class="text-[10px] text-text-sec font-medium truncate w-full text-center">Milo</span>
+              </div>
+              <div class="group/f flex flex-col items-center gap-1 cursor-pointer">
+                <div class="size-12 rounded-full bg-cover bg-center ring-2 ring-white ring-offset-2 ring-offset-primary-light transition-transform group-hover/f:scale-110" style="background-image:url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=100&auto=format&fit=crop&q=80');"></div>
+                <span class="text-[10px] text-text-sec font-medium truncate w-full text-center">Oliver</span>
+              </div>
+              <div class="group/f flex flex-col items-center gap-1 cursor-pointer">
+                <div class="size-12 rounded-full bg-cover bg-center ring-2 ring-white ring-offset-2 ring-offset-primary-light transition-transform group-hover/f:scale-110" style="background-image:url('https://images.unsplash.com/photo-1561948955-570b270e7c36?w=100&auto=format&fit=crop&q=80');"></div>
+                <span class="text-[10px] text-text-sec font-medium truncate w-full text-center">Bella</span>
+              </div>
+              <div class="group/f flex flex-col items-center gap-1 cursor-pointer">
+                <div class="size-12 rounded-full bg-cover bg-center ring-2 ring-white ring-offset-2 ring-offset-primary-light transition-transform group-hover/f:scale-110" style="background-image:url('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=100&auto=format&fit=crop&q=80');"></div>
+                <span class="text-[10px] text-text-sec font-medium truncate w-full text-center">Cleo</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="lg:col-span-8 xl:col-span-9 flex flex-col gap-6">
+
+        <!-- About -->
+        <section class="rounded-2xl bg-surface border border-border-col shadow-card p-6">
+          <h2 class="text-xl font-bold flex items-center gap-2 mb-4">
+            <span class="material-symbols-outlined filled text-primary">pets</span> About Luna
+          </h2>
+          <p class="text-base leading-relaxed text-text-main/80">Professional windowsill supervisor and expert biscuit-maker. Extremely opinionated about dinner time — 6pm means 6pm. Loves chin scratches and will accept nothing less than the finest tuna. Currently accepting applications for lap privileges.</p>
+          <div class="mt-5">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-text-sec mb-3">Personality &amp; Traits</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary"><span class="material-symbols-outlined text-[15px]">bolt</span>Playful</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary"><span class="material-symbols-outlined text-[15px]">restaurant</span>Foodie</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary"><span class="material-symbols-outlined text-[15px]">bedtime</span>Cuddly</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary"><span class="material-symbols-outlined text-[15px]">cruelty_free</span>Gentle</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-sm font-medium text-primary"><span class="material-symbols-outlined text-[15px]">diversity_1</span>Good w/ Kids</span>
+            </div>
+          </div>
+          <!-- Quick info row -->
+          <div class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-5 border-t border-border-col">
+            <div><p class="text-xs text-text-sec mb-0.5">Breed</p><p class="text-sm font-bold">British Shorthair</p></div>
+            <div><p class="text-xs text-text-sec mb-0.5">Age</p><p class="text-sm font-bold">3 Years</p></div>
+            <div><p class="text-xs text-text-sec mb-0.5">Colour</p><p class="text-sm font-bold">Blue/Grey</p></div>
+            <div><p class="text-xs text-text-sec mb-0.5">Microchipped</p><p class="text-sm font-bold text-green-600">Yes</p></div>
+          </div>
+        </section>
+
+        <!-- Moments Gallery -->
+        <section>
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-bold">Moments</h2>
+            <a href="#" class="flex items-center gap-1 text-primary text-sm font-bold hover:gap-2 transition-all">View all <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=400&auto=format&fit=crop&q=80');"></div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+            </div>
+            <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&auto=format&fit=crop&q=80');"></div>
+            </div>
+            <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=400&auto=format&fit=crop&q=80');"></div>
+            </div>
+            <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400&auto=format&fit=crop&q=80');"></div>
+            </div>
+            <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1561948955-570b270e7c36?w=400&auto=format&fit=crop&q=80');"></div>
+              <!-- Play button -->
+              <div class="absolute inset-0 flex items-center justify-center bg-black/15 hover:bg-black/25 transition-colors">
+                <div class="size-11 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-soft">
+                  <span class="material-symbols-outlined filled">play_arrow</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
+              <div class="absolute inset-0 bg-cover bg-center img-zoom" style="background-image:url('https://images.unsplash.com/photo-1583795128727-6ec3642408f8?w=400&auto=format&fit=crop&q=80');"></div>
+              <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="text-sm font-bold text-white">+18 More</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Posts Feed -->
+        <section>
+          <h2 class="text-xl font-bold mb-4">Latest Updates</h2>
+          <div class="flex flex-col gap-5">
+
+            <!-- Post 1 -->
+            <article class="rounded-2xl bg-surface border border-border-col shadow-card overflow-hidden">
+              <div class="flex items-center justify-between p-4 pb-3">
+                <div class="flex items-center gap-3">
+                  <div class="size-10 rounded-full bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=100&auto=format&fit=crop&q=80');"></div>
+                  <div>
+                    <p class="text-sm font-bold">Luna</p>
+                    <p class="text-xs text-text-sec">2 hours ago · London</p>
+                  </div>
+                </div>
+                <button class="rounded-full p-1 text-text-sec hover:bg-border-col transition-colors">
+                  <span class="material-symbols-outlined">more_horiz</span>
+                </button>
+              </div>
+              <p class="px-4 pb-3 text-sm text-text-main">Caught a sunbeam and refused to let it go. This is my spot now. Permanently. No negotiations. ☀️</p>
+              <div class="h-64 w-full bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=800&auto=format&fit=crop&q=80');"></div>
+              <div class="flex items-center gap-6 border-t border-border-col px-4 py-3">
+                <button class="flex items-center gap-1.5 text-sm font-semibold text-text-sec hover:text-primary transition-colors group">
+                  <span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">favorite</span> 312
+                </button>
+                <button class="flex items-center gap-1.5 text-sm font-semibold text-text-sec hover:text-text-main transition-colors group">
+                  <span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">chat_bubble</span> 58
+                </button>
+                <button class="ml-auto flex items-center gap-1.5 text-sm font-semibold text-text-sec hover:text-text-main transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">share</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Post 2 (text only) -->
+            <article class="rounded-2xl bg-surface border border-border-col shadow-card overflow-hidden">
+              <div class="flex items-center justify-between p-4 pb-3">
+                <div class="flex items-center gap-3">
+                  <div class="size-10 rounded-full bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=100&auto=format&fit=crop&q=80');"></div>
+                  <div>
+                    <p class="text-sm font-bold">Luna</p>
+                    <p class="text-xs text-text-sec">Yesterday · London</p>
+                  </div>
+                </div>
+                <button class="rounded-full p-1 text-text-sec hover:bg-border-col transition-colors">
+                  <span class="material-symbols-outlined">more_horiz</span>
+                </button>
+              </div>
+              <p class="px-4 pb-4 text-sm text-text-main leading-relaxed">The food bowl was moved 3cm to the left. I haven't eaten since. This is a protest. Justice for consistent bowl placement. 🍽️</p>
+              <div class="flex items-center gap-6 border-t border-border-col px-4 py-3">
+                <button class="flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors group">
+                  <span class="material-symbols-outlined filled text-[20px] group-hover:scale-110 transition-transform">favorite</span> 1.4k
+                </button>
+                <button class="flex items-center gap-1.5 text-sm font-semibold text-text-sec hover:text-text-main transition-colors group">
+                  <span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">chat_bubble</span> 204
+                </button>
+                <button class="ml-auto flex items-center gap-1.5 text-sm font-semibold text-text-sec hover:text-text-main transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">share</span>
+                </button>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="w-full bg-dark-bg text-white pt-14 pb-8 px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-[1280px]">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+      <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+        <a href="Homepage.html" class="flex items-center gap-3">
+          <div class="size-7 text-primary"><svg fill="currentColor" viewBox="0 0 48 48"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"/></svg></div>
+          <span class="font-bold tracking-tight">Cats<span class="text-primary">.directory</span></span>
+        </a>
+        <p class="text-sm text-white/40 leading-relaxed">Europe's largest cat community.</p>
+      </div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Company</h4><a href="#" class="text-sm text-white/40 hover:text-white">About Us</a><a href="#" class="text-sm text-white/40 hover:text-white">Careers</a><a href="#" class="text-sm text-white/40 hover:text-white">Contact</a></div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Resources</h4><a href="Blog.html" class="text-sm text-white/40 hover:text-white">Blog</a><a href="#" class="text-sm text-white/40 hover:text-white">Breed Guide</a><a href="#" class="text-sm text-white/40 hover:text-white">Community</a></div>
+      <div class="flex flex-col gap-3"><h4 class="font-bold text-sm">Legal</h4><a href="#" class="text-sm text-white/40 hover:text-white">Privacy</a><a href="#" class="text-sm text-white/40 hover:text-white">Terms</a><a href="#" class="text-sm text-white/40 hover:text-white">Cookies</a></div>
+    </div>
+    <div class="border-t border-white/8 pt-6 flex items-center justify-between text-xs text-white/30">
+      <p>© 2026 Cats.directory. All rights reserved.</p>
+      <p>Made with <span class="text-primary">♥</span> for cat lovers across Europe</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
